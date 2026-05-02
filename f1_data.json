@@ -1,0 +1,4130 @@
+{
+  "meta": {
+    "season": 2026,
+    "generated_on": "2026-05-02",
+    "notes": [
+      "F1 event times are stored as UTC/timezone-aware sessions and rendered for America/Argentina/Buenos_Aires with Intl.DateTimeFormat. Miami 2026 was corrected so it renders Sprint 13:00 ART, Qualifying 17:00 ART and Race 17:00 ART.",
+      "F2 session times were taken from the official F2 round pages and are track times unless otherwise noted.",
+      "For F2, both sprint_race and feature_race are included because the championship runs two race sessions per round.",
+      "Direct stable image URLs for driver headshots and team logos were not reliably exposed in the parsed official HTML, so those fields are null and official page URLs are included instead.",
+      "Formula 1 race results include full classified/NC rows for Australia, China and Japan as published before the Miami race weekend on 2026-05-02.",
+      "Formula 2 event times are event-local when known; the app converts known times to America/Argentina/Buenos_Aires using Intl. TBC remains visible as TBC."
+    ],
+    "sources": {
+      "f1_calendar": "https://www.formula1.com/en/racing/2026",
+      "f1_drivers": "https://www.formula1.com/en/drivers",
+      "f1_teams": "https://www.formula1.com/en/teams",
+      "f1_driver_standings": "https://www.formula1.com/en/results/2026/drivers",
+      "f2_calendar": "https://www.fiaformula2.com/Calendar?seasonid=183",
+      "f2_standings": "https://www.fiaformula2.com/Standings/Driver",
+      "f1_race_results": "https://www.formula1.com/en/results/2026/races",
+      "f2_revised_calendar": "https://www.fia.com/news/miami-and-montreal-host-fia-formula-2-championship-rounds-2026"
+    },
+    "asset_version": 2,
+    "asset_notes": [
+      "Driver headshot URLs come from OpenF1's drivers endpoint and point to official media.formula1.com assets.",
+      "Most team logo URLs were replaced with direct public asset links from Wikimedia Commons.",
+      "Racing Bulls team_logo_url remains null because a stable direct logo asset was not verified in this pass."
+    ]
+  },
+  "formula1": {
+    "timezone": "UTC",
+    "grand_prix": [
+      {
+        "round": 1,
+        "gp": "Australia",
+        "official_name": "FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-03-06",
+            "time": "01:30"
+          },
+          "practice_2": {
+            "date": "2026-03-06",
+            "time": "05:00"
+          },
+          "practice_3": {
+            "date": "2026-03-07",
+            "time": "01:30"
+          },
+          "qualifying": {
+            "date": "2026-03-07",
+            "time": "05:00"
+          },
+          "race": {
+            "date": "2026-03-08",
+            "time": "04:00"
+          }
+        },
+        "flag": "🇦🇺",
+        "country": "Australia",
+        "country_code": "AU"
+      },
+      {
+        "round": 2,
+        "gp": "China",
+        "official_name": "FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-03-13",
+            "time": "03:30"
+          },
+          "sprint_qualifying": {
+            "date": "2026-03-13",
+            "time": "07:30"
+          },
+          "sprint": {
+            "date": "2026-03-14",
+            "time": "03:00"
+          },
+          "qualifying": {
+            "date": "2026-03-14",
+            "time": "07:00"
+          },
+          "race": {
+            "date": "2026-03-15",
+            "time": "07:00"
+          }
+        },
+        "flag": "🇨🇳",
+        "country": "China",
+        "country_code": "CN"
+      },
+      {
+        "round": 3,
+        "gp": "Japan",
+        "official_name": "FORMULA 1 ARAMCO JAPANESE GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-03-27",
+            "time": "02:30"
+          },
+          "practice_2": {
+            "date": "2026-03-27",
+            "time": "06:00"
+          },
+          "practice_3": {
+            "date": "2026-03-28",
+            "time": "02:30"
+          },
+          "qualifying": {
+            "date": "2026-03-28",
+            "time": "06:00"
+          },
+          "race": {
+            "date": "2026-03-29",
+            "time": "05:00"
+          }
+        },
+        "flag": "🇯🇵",
+        "country": "Japon",
+        "country_code": "JP"
+      },
+      {
+        "round": 4,
+        "gp": "Miami",
+        "official_name": "FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-05-01",
+            "time": "16:00"
+          },
+          "sprint_qualifying": {
+            "date": "2026-05-01",
+            "time": "20:30"
+          },
+          "sprint": {
+            "date": "2026-05-02",
+            "time": "16:00",
+            "datetime_utc": "2026-05-02T16:00:00Z"
+          },
+          "qualifying": {
+            "date": "2026-05-02",
+            "time": "20:00",
+            "datetime_utc": "2026-05-02T20:00:00Z"
+          },
+          "race": {
+            "date": "2026-05-03",
+            "time": "20:00",
+            "datetime_utc": "2026-05-03T20:00:00Z"
+          }
+        },
+        "flag": "🇺🇸",
+        "country": "Estados Unidos",
+        "timezone": "UTC",
+        "country_code": "US"
+      },
+      {
+        "round": 5,
+        "gp": "Canada",
+        "official_name": "FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-05-22",
+            "time": "16:30"
+          },
+          "sprint_qualifying": {
+            "date": "2026-05-22",
+            "time": "20:30"
+          },
+          "sprint": {
+            "date": "2026-05-23",
+            "time": "16:00"
+          },
+          "qualifying": {
+            "date": "2026-05-23",
+            "time": "20:00"
+          },
+          "race": {
+            "date": "2026-05-24",
+            "time": "20:00"
+          }
+        },
+        "flag": "🇨🇦",
+        "country": "Canada",
+        "country_code": "CA"
+      },
+      {
+        "round": 6,
+        "gp": "Monaco",
+        "official_name": "FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-06-05",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-06-05",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-06-06",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-06-06",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-06-07",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇲🇨",
+        "country": "Monaco",
+        "country_code": "MC"
+      },
+      {
+        "round": 7,
+        "gp": "Barcelona-Catalunya",
+        "official_name": "FORMULA 1 MSC CRUISES GRAN PREMIO DE BARCELONA-CATALUNYA 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-06-12",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-06-12",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-06-13",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-06-13",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-06-14",
+            "time": "13:00"
+          }
+        },
+        "flag": "🏁",
+        "country": "Barcelona-Catalunya"
+      },
+      {
+        "round": 8,
+        "gp": "Austria",
+        "official_name": "FORMULA 1 LENOVO AUSTRIAN GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-06-26",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-06-26",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-06-27",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-06-27",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-06-28",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇦🇹",
+        "country": "Austria",
+        "country_code": "AT"
+      },
+      {
+        "round": 9,
+        "gp": "Great Britain",
+        "official_name": "FORMULA 1 PIRELLI BRITISH GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-07-03",
+            "time": "11:30"
+          },
+          "sprint_qualifying": {
+            "date": "2026-07-03",
+            "time": "15:30"
+          },
+          "sprint": {
+            "date": "2026-07-04",
+            "time": "11:00"
+          },
+          "qualifying": {
+            "date": "2026-07-04",
+            "time": "15:00"
+          },
+          "race": {
+            "date": "2026-07-05",
+            "time": "14:00"
+          }
+        },
+        "flag": "🇬🇧",
+        "country": "Reino Unido",
+        "country_code": "GB"
+      },
+      {
+        "round": 10,
+        "gp": "Belgium",
+        "official_name": "FORMULA 1 MOËT & CHANDON BELGIAN GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-07-17",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-07-17",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-07-18",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-07-18",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-07-19",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇧🇪",
+        "country": "Belgica",
+        "country_code": "BE"
+      },
+      {
+        "round": 11,
+        "gp": "Hungary",
+        "official_name": "FORMULA 1 AWS HUNGARIAN GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-07-24",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-07-24",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-07-25",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-07-25",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-07-26",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇭🇺",
+        "country": "Hungria",
+        "country_code": "HU"
+      },
+      {
+        "round": 12,
+        "gp": "Netherlands",
+        "official_name": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-08-21",
+            "time": "10:30"
+          },
+          "sprint_qualifying": {
+            "date": "2026-08-21",
+            "time": "14:30"
+          },
+          "sprint": {
+            "date": "2026-08-22",
+            "time": "10:00"
+          },
+          "qualifying": {
+            "date": "2026-08-22",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-08-23",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇳🇱",
+        "country": "Paises Bajos",
+        "country_code": "NL"
+      },
+      {
+        "round": 13,
+        "gp": "Italy",
+        "official_name": "FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-09-04",
+            "time": "10:30"
+          },
+          "practice_2": {
+            "date": "2026-09-04",
+            "time": "14:00"
+          },
+          "practice_3": {
+            "date": "2026-09-05",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-09-05",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-09-06",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇮🇹",
+        "country": "Italia",
+        "country_code": "IT"
+      },
+      {
+        "round": 14,
+        "gp": "Spain",
+        "official_name": "FORMULA 1 TAG HEUER GRAN PREMIO DE ESPAÑA 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-09-11",
+            "time": "11:30"
+          },
+          "practice_2": {
+            "date": "2026-09-11",
+            "time": "15:00"
+          },
+          "practice_3": {
+            "date": "2026-09-12",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-09-12",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-09-13",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇪🇸",
+        "country": "Espana",
+        "country_code": "ES"
+      },
+      {
+        "round": 15,
+        "gp": "Azerbaijan",
+        "official_name": "FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-09-24",
+            "time": "08:30"
+          },
+          "practice_2": {
+            "date": "2026-09-24",
+            "time": "12:00"
+          },
+          "practice_3": {
+            "date": "2026-09-25",
+            "time": "08:30"
+          },
+          "qualifying": {
+            "date": "2026-09-25",
+            "time": "12:00"
+          },
+          "race": {
+            "date": "2026-09-26",
+            "time": "11:00"
+          }
+        },
+        "flag": "🇦🇿",
+        "country": "Azerbaiyan",
+        "country_code": "AZ"
+      },
+      {
+        "round": 16,
+        "gp": "Singapore",
+        "official_name": "FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-10-09",
+            "time": "08:30"
+          },
+          "sprint_qualifying": {
+            "date": "2026-10-09",
+            "time": "12:30"
+          },
+          "sprint": {
+            "date": "2026-10-10",
+            "time": "09:00"
+          },
+          "qualifying": {
+            "date": "2026-10-10",
+            "time": "13:00"
+          },
+          "race": {
+            "date": "2026-10-11",
+            "time": "12:00"
+          }
+        },
+        "flag": "🇸🇬",
+        "country": "Singapur",
+        "country_code": "SG"
+      },
+      {
+        "round": 17,
+        "gp": "United States",
+        "official_name": "FORMULA 1 MSC CRUISES UNITED STATES GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-10-23",
+            "time": "17:30"
+          },
+          "practice_2": {
+            "date": "2026-10-23",
+            "time": "21:00"
+          },
+          "practice_3": {
+            "date": "2026-10-24",
+            "time": "17:30"
+          },
+          "qualifying": {
+            "date": "2026-10-24",
+            "time": "21:00"
+          },
+          "race": {
+            "date": "2026-10-25",
+            "time": "20:00"
+          }
+        },
+        "flag": "🇺🇸",
+        "country": "Estados Unidos",
+        "country_code": "US"
+      },
+      {
+        "round": 18,
+        "gp": "Mexico",
+        "official_name": "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-10-30",
+            "time": "18:30"
+          },
+          "practice_2": {
+            "date": "2026-10-30",
+            "time": "22:00"
+          },
+          "practice_3": {
+            "date": "2026-10-31",
+            "time": "17:30"
+          },
+          "qualifying": {
+            "date": "2026-10-31",
+            "time": "21:00"
+          },
+          "race": {
+            "date": "2026-11-01",
+            "time": "20:00"
+          }
+        },
+        "flag": "🇲🇽",
+        "country": "Mexico",
+        "country_code": "MX"
+      },
+      {
+        "round": 19,
+        "gp": "Brazil",
+        "official_name": "FORMULA 1 MSC CRUISES GRANDE PRÊMIO DE SÃO PAULO 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-11-06",
+            "time": "15:30"
+          },
+          "practice_2": {
+            "date": "2026-11-06",
+            "time": "19:00"
+          },
+          "practice_3": {
+            "date": "2026-11-07",
+            "time": "14:30"
+          },
+          "qualifying": {
+            "date": "2026-11-07",
+            "time": "18:00"
+          },
+          "race": {
+            "date": "2026-11-08",
+            "time": "17:00"
+          }
+        },
+        "flag": "🇧🇷",
+        "country": "Brasil",
+        "country_code": "BR"
+      },
+      {
+        "round": 20,
+        "gp": "Las Vegas",
+        "official_name": "FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-11-20",
+            "time": "00:30"
+          },
+          "practice_2": {
+            "date": "2026-11-20",
+            "time": "04:00"
+          },
+          "practice_3": {
+            "date": "2026-11-21",
+            "time": "00:30"
+          },
+          "qualifying": {
+            "date": "2026-11-21",
+            "time": "04:00"
+          },
+          "race": {
+            "date": "2026-11-22",
+            "time": "04:00"
+          }
+        },
+        "flag": "🇺🇸",
+        "country": "Estados Unidos",
+        "country_code": "US"
+      },
+      {
+        "round": 21,
+        "gp": "Qatar",
+        "official_name": "FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-11-27",
+            "time": "13:30"
+          },
+          "practice_2": {
+            "date": "2026-11-27",
+            "time": "17:00"
+          },
+          "practice_3": {
+            "date": "2026-11-28",
+            "time": "14:30"
+          },
+          "qualifying": {
+            "date": "2026-11-28",
+            "time": "18:00"
+          },
+          "race": {
+            "date": "2026-11-29",
+            "time": "16:00"
+          }
+        },
+        "flag": "🇶🇦",
+        "country": "Qatar",
+        "country_code": "QA"
+      },
+      {
+        "round": 22,
+        "gp": "Abu Dhabi",
+        "official_name": "FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2026",
+        "sessions": {
+          "practice_1": {
+            "date": "2026-12-04",
+            "time": "09:30"
+          },
+          "practice_2": {
+            "date": "2026-12-04",
+            "time": "13:00"
+          },
+          "practice_3": {
+            "date": "2026-12-05",
+            "time": "10:30"
+          },
+          "qualifying": {
+            "date": "2026-12-05",
+            "time": "14:00"
+          },
+          "race": {
+            "date": "2026-12-06",
+            "time": "13:00"
+          }
+        },
+        "flag": "🇦🇪",
+        "country": "Emiratos Arabes Unidos",
+        "country_code": "AE"
+      }
+    ],
+    "race_results": [
+      {
+        "round": 1,
+        "gp": "Australia",
+        "race_date": "2026-03-08",
+        "winner": {
+          "position": 1,
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "laps": 58,
+          "time": "1:23:06.801",
+          "points": 25
+        },
+        "podium": [
+          "George Russell",
+          "Kimi Antonelli",
+          "Charles Leclerc"
+        ],
+        "source_url": "https://www.formula1.com/en/results/2026/races/1279/australia/race-result",
+        "results": [
+          {
+            "position": 1,
+            "status": "classified",
+            "driver": "George Russell",
+            "team": "Mercedes",
+            "laps": 58,
+            "time": "1:23:06.801",
+            "points": 25
+          },
+          {
+            "position": 2,
+            "status": "classified",
+            "driver": "Kimi Antonelli",
+            "team": "Mercedes",
+            "laps": 58,
+            "time": "+2.974",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "status": "classified",
+            "driver": "Charles Leclerc",
+            "team": "Ferrari",
+            "laps": 58,
+            "time": "+15.519",
+            "points": 15
+          },
+          {
+            "position": 4,
+            "status": "classified",
+            "driver": "Lewis Hamilton",
+            "team": "Ferrari",
+            "laps": 58,
+            "time": "+16.144",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "status": "classified",
+            "driver": "Lando Norris",
+            "team": "McLaren",
+            "laps": 58,
+            "time": "+51.741",
+            "points": 10
+          },
+          {
+            "position": 6,
+            "status": "classified",
+            "driver": "Max Verstappen",
+            "team": "Red Bull Racing",
+            "laps": 58,
+            "time": "+54.617",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "status": "classified",
+            "driver": "Oliver Bearman",
+            "team": "Haas F1 Team",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 6
+          },
+          {
+            "position": 8,
+            "status": "classified",
+            "driver": "Arvid Lindblad",
+            "team": "Racing Bulls",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 4
+          },
+          {
+            "position": 9,
+            "status": "classified",
+            "driver": "Gabriel Bortoleto",
+            "team": "Audi",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 2
+          },
+          {
+            "position": 10,
+            "status": "classified",
+            "driver": "Pierre Gasly",
+            "team": "Alpine",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 1
+          },
+          {
+            "position": 11,
+            "status": "classified",
+            "driver": "Esteban Ocon",
+            "team": "Haas F1 Team",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 12,
+            "status": "classified",
+            "driver": "Alexander Albon",
+            "team": "Williams",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 13,
+            "status": "classified",
+            "driver": "Liam Lawson",
+            "team": "Racing Bulls",
+            "laps": 57,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 14,
+            "status": "classified",
+            "driver": "Franco Colapinto",
+            "team": "Alpine",
+            "laps": 56,
+            "time": "+2 laps",
+            "points": 0
+          },
+          {
+            "position": 15,
+            "status": "classified",
+            "driver": "Carlos Sainz",
+            "team": "Williams",
+            "laps": 56,
+            "time": "+2 laps",
+            "points": 0
+          },
+          {
+            "position": 16,
+            "status": "classified",
+            "driver": "Sergio Perez",
+            "team": "Cadillac",
+            "laps": 55,
+            "time": "+3 laps",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Lance Stroll",
+            "team": "Aston Martin",
+            "laps": 43,
+            "time": "+15 laps",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Fernando Alonso",
+            "team": "Aston Martin",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Valtteri Bottas",
+            "team": "Cadillac",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Isack Hadjar",
+            "team": "Red Bull Racing",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Oscar Piastri",
+            "team": "McLaren",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Nico Hulkenberg",
+            "team": "Audi",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "gp": "China",
+        "race_date": "2026-03-15",
+        "winner": {
+          "position": 1,
+          "driver": "Kimi Antonelli",
+          "team": "Mercedes",
+          "laps": 56,
+          "time": "1:33:15.607",
+          "points": 25
+        },
+        "podium": [
+          "Kimi Antonelli",
+          "George Russell",
+          "Lewis Hamilton"
+        ],
+        "source_url": "https://www.formula1.com/en/results/2026/races/1280/china/race-result",
+        "results": [
+          {
+            "position": 1,
+            "status": "classified",
+            "driver": "Kimi Antonelli",
+            "team": "Mercedes",
+            "laps": 56,
+            "time": "1:33:15.607",
+            "points": 25
+          },
+          {
+            "position": 2,
+            "status": "classified",
+            "driver": "George Russell",
+            "team": "Mercedes",
+            "laps": 56,
+            "time": "+5.515",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "status": "classified",
+            "driver": "Lewis Hamilton",
+            "team": "Ferrari",
+            "laps": 56,
+            "time": "+25.267",
+            "points": 15
+          },
+          {
+            "position": 4,
+            "status": "classified",
+            "driver": "Charles Leclerc",
+            "team": "Ferrari",
+            "laps": 56,
+            "time": "+28.894",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "status": "classified",
+            "driver": "Oliver Bearman",
+            "team": "Haas F1 Team",
+            "laps": 56,
+            "time": "+57.268",
+            "points": 10
+          },
+          {
+            "position": 6,
+            "status": "classified",
+            "driver": "Pierre Gasly",
+            "team": "Alpine",
+            "laps": 56,
+            "time": "+59.647",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "status": "classified",
+            "driver": "Liam Lawson",
+            "team": "Racing Bulls",
+            "laps": 56,
+            "time": "+80.588",
+            "points": 6
+          },
+          {
+            "position": 8,
+            "status": "classified",
+            "driver": "Isack Hadjar",
+            "team": "Red Bull Racing",
+            "laps": 56,
+            "time": "+87.247",
+            "points": 4
+          },
+          {
+            "position": 9,
+            "status": "classified",
+            "driver": "Carlos Sainz",
+            "team": "Williams",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 2
+          },
+          {
+            "position": 10,
+            "status": "classified",
+            "driver": "Franco Colapinto",
+            "team": "Alpine",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 1
+          },
+          {
+            "position": 11,
+            "status": "classified",
+            "driver": "Nico Hulkenberg",
+            "team": "Audi",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 12,
+            "status": "classified",
+            "driver": "Arvid Lindblad",
+            "team": "Racing Bulls",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 13,
+            "status": "classified",
+            "driver": "Valtteri Bottas",
+            "team": "Cadillac",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 14,
+            "status": "classified",
+            "driver": "Esteban Ocon",
+            "team": "Haas F1 Team",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 15,
+            "status": "classified",
+            "driver": "Sergio Perez",
+            "team": "Cadillac",
+            "laps": 55,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Max Verstappen",
+            "team": "Red Bull Racing",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Fernando Alonso",
+            "team": "Aston Martin",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Lance Stroll",
+            "team": "Aston Martin",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Oscar Piastri",
+            "team": "McLaren",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Lando Norris",
+            "team": "McLaren",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Gabriel Bortoleto",
+            "team": "Audi",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Alexander Albon",
+            "team": "Williams",
+            "laps": null,
+            "time": "DNS",
+            "points": 0
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "gp": "Japan",
+        "race_date": "2026-03-29",
+        "winner": {
+          "position": 1,
+          "driver": "Kimi Antonelli",
+          "team": "Mercedes",
+          "laps": 53,
+          "time": "1:28:03.403",
+          "points": 25
+        },
+        "podium": [
+          "Kimi Antonelli",
+          "Oscar Piastri",
+          "Charles Leclerc"
+        ],
+        "source_url": "https://www.formula1.com/en/results/2026/races/1281/japan/race-result",
+        "results": [
+          {
+            "position": 1,
+            "status": "classified",
+            "driver": "Kimi Antonelli",
+            "team": "Mercedes",
+            "laps": 53,
+            "time": "1:28:03.403",
+            "points": 25
+          },
+          {
+            "position": 2,
+            "status": "classified",
+            "driver": "Oscar Piastri",
+            "team": "McLaren",
+            "laps": 53,
+            "time": "+13.722",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "status": "classified",
+            "driver": "Charles Leclerc",
+            "team": "Ferrari",
+            "laps": 53,
+            "time": "+15.270",
+            "points": 15
+          },
+          {
+            "position": 4,
+            "status": "classified",
+            "driver": "George Russell",
+            "team": "Mercedes",
+            "laps": 53,
+            "time": "+15.754",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "status": "classified",
+            "driver": "Lando Norris",
+            "team": "McLaren",
+            "laps": 53,
+            "time": "+23.479",
+            "points": 10
+          },
+          {
+            "position": 6,
+            "status": "classified",
+            "driver": "Lewis Hamilton",
+            "team": "Ferrari",
+            "laps": 53,
+            "time": "+25.037",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "status": "classified",
+            "driver": "Pierre Gasly",
+            "team": "Alpine",
+            "laps": 53,
+            "time": "+32.340",
+            "points": 6
+          },
+          {
+            "position": 8,
+            "status": "classified",
+            "driver": "Max Verstappen",
+            "team": "Red Bull Racing",
+            "laps": 53,
+            "time": "+32.677",
+            "points": 4
+          },
+          {
+            "position": 9,
+            "status": "classified",
+            "driver": "Liam Lawson",
+            "team": "Racing Bulls",
+            "laps": 53,
+            "time": "+50.180",
+            "points": 2
+          },
+          {
+            "position": 10,
+            "status": "classified",
+            "driver": "Esteban Ocon",
+            "team": "Haas F1 Team",
+            "laps": 53,
+            "time": "+51.216",
+            "points": 1
+          },
+          {
+            "position": 11,
+            "status": "classified",
+            "driver": "Nico Hulkenberg",
+            "team": "Audi",
+            "laps": 53,
+            "time": "+52.280",
+            "points": 0
+          },
+          {
+            "position": 12,
+            "status": "classified",
+            "driver": "Isack Hadjar",
+            "team": "Red Bull Racing",
+            "laps": 53,
+            "time": "+56.154",
+            "points": 0
+          },
+          {
+            "position": 13,
+            "status": "classified",
+            "driver": "Gabriel Bortoleto",
+            "team": "Audi",
+            "laps": 53,
+            "time": "+59.078",
+            "points": 0
+          },
+          {
+            "position": 14,
+            "status": "classified",
+            "driver": "Arvid Lindblad",
+            "team": "Racing Bulls",
+            "laps": 53,
+            "time": "+59.848",
+            "points": 0
+          },
+          {
+            "position": 15,
+            "status": "classified",
+            "driver": "Carlos Sainz",
+            "team": "Williams",
+            "laps": 53,
+            "time": "+65.008",
+            "points": 0
+          },
+          {
+            "position": 16,
+            "status": "classified",
+            "driver": "Franco Colapinto",
+            "team": "Alpine",
+            "laps": 53,
+            "time": "+65.773",
+            "points": 0
+          },
+          {
+            "position": 17,
+            "status": "classified",
+            "driver": "Sergio Perez",
+            "team": "Cadillac",
+            "laps": 53,
+            "time": "+92.453",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "status": "classified",
+            "driver": "Fernando Alonso",
+            "team": "Aston Martin",
+            "laps": 52,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 19,
+            "status": "classified",
+            "driver": "Valtteri Bottas",
+            "team": "Cadillac",
+            "laps": 52,
+            "time": "+1 lap",
+            "points": 0
+          },
+          {
+            "position": 20,
+            "status": "classified",
+            "driver": "Alexander Albon",
+            "team": "Williams",
+            "laps": 51,
+            "time": "+2 laps",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Lance Stroll",
+            "team": "Aston Martin",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          },
+          {
+            "position": null,
+            "status": "NC",
+            "driver": "Oliver Bearman",
+            "team": "Haas F1 Team",
+            "laps": null,
+            "time": "DNF",
+            "points": 0
+          }
+        ]
+      }
+    ],
+    "session_results": [
+      {
+        "series": "formula1",
+        "round": 1,
+        "gp": "Australia",
+        "country": "Australia",
+        "flag": "🇦🇺",
+        "date": "2026-03-08",
+        "sessions": [
+          {
+            "type": "race",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1279/australia/race-result",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 58,
+                "time": "1:23:06.801",
+                "points": 25
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 58,
+                "time": "+2.974",
+                "points": 18
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 58,
+                "time": "+15.519",
+                "points": 15
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 58,
+                "time": "+16.144",
+                "points": 12
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": 58,
+                "time": "+51.741",
+                "points": 10
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": 58,
+                "time": "+54.617",
+                "points": 8
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 6
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 4
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 2
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 1
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 57,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 56,
+                "time": "+2 laps",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 56,
+                "time": "+2 laps",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 55,
+                "time": "+3 laps",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": 43,
+                "time": "+15 laps",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "qualifying",
+            "label": "Clasificaci?n",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1279/australia/qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:18.518",
+                "points": 0
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:18.811",
+                "points": 0
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:19.303",
+                "points": 0
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:19.327",
+                "points": 0
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:19.380",
+                "points": 0
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:19.475",
+                "points": 0
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:19.478",
+                "points": 0
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:19.994",
+                "points": 0
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:21.247",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:20.221",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:20.303",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:20.311",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:20.491",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:20.501",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:20.941",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:21.270",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:21.969",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:22.605",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:23.244",
+                "points": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "series": "formula1",
+        "round": 2,
+        "gp": "China",
+        "country": "China",
+        "flag": "🇨🇳",
+        "date": "2026-03-15",
+        "sessions": [
+          {
+            "type": "race",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1280/china/race-result",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 56,
+                "time": "1:33:15.607",
+                "points": 25
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 56,
+                "time": "+5.515",
+                "points": 18
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 56,
+                "time": "+25.267",
+                "points": 15
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 56,
+                "time": "+28.894",
+                "points": 12
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": 56,
+                "time": "+57.268",
+                "points": 10
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 56,
+                "time": "+59.647",
+                "points": 8
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 56,
+                "time": "+80.588",
+                "points": 6
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": 56,
+                "time": "+87.247",
+                "points": 4
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 2
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 1
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 55,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": null,
+                "time": "DNS",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "qualifying",
+            "label": "Clasificaci?n",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1280/china/qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:32.064",
+                "points": 0
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:32.286",
+                "points": 0
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:32.415",
+                "points": 0
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:32.428",
+                "points": 0
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:32.550",
+                "points": 0
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:32.608",
+                "points": 0
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:32.873",
+                "points": 0
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:33.002",
+                "points": 0
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:33.121",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:33.292",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:33.354",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:33.357",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:33.538",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:33.765",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:33.784",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:33.965",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:34.317",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:34.772",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:35.203",
+                "points": 0
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:35.436",
+                "points": 0
+              },
+              {
+                "position": 21,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:35.995",
+                "points": 0
+              },
+              {
+                "position": 22,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:36.906",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "sprint",
+            "label": "Sprint",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1280/china/sprint-results",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 19,
+                "time": "33:38.998",
+                "points": 8
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 19,
+                "time": "+0.674s",
+                "points": 7
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 19,
+                "time": "+2.554s",
+                "points": 6
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": 19,
+                "time": "+4.433s",
+                "points": 5
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 19,
+                "time": "+5.688s",
+                "points": 4
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": 19,
+                "time": "+6.809s",
+                "points": 3
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 19,
+                "time": "+10.900s",
+                "points": 2
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas",
+                "laps": 19,
+                "time": "+11.271s",
+                "points": 1
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull",
+                "laps": 19,
+                "time": "+11.619s",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas",
+                "laps": 19,
+                "time": "+13.887s",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 19,
+                "time": "+14.780s",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 19,
+                "time": "+15.753s",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": 19,
+                "time": "+15.858s",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 19,
+                "time": "+16.393s",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull",
+                "laps": 19,
+                "time": "+16.430s",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 19,
+                "time": "+20.014s",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": 19,
+                "time": "+21.599s",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": 19,
+                "time": "+21.971s",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 19,
+                "time": "+28.241s",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 12,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 12,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 11,
+                "time": "DNF",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "sprintQualifying",
+            "label": "Clasificaci?n Sprint",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1280/china/sprint-qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:31.520",
+                "points": 0
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:31.809",
+                "points": 0
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:32.141",
+                "points": 0
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:32.161",
+                "points": 0
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:32.224",
+                "points": 0
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:32.528",
+                "points": 0
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:32.888",
+                "points": 0
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:33.254",
+                "points": 0
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:33.409",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:33.723",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:33.635",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:33.639",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:33.714",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:33.774",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:34.048",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:34.327",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:34.761",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:35.305",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:35.581",
+                "points": 0
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:36.151",
+                "points": 0
+              },
+              {
+                "position": 21,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:37.378",
+                "points": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "series": "formula1",
+        "round": 3,
+        "gp": "Japan",
+        "country": "Japon",
+        "flag": "🇯🇵",
+        "date": "2026-03-29",
+        "sessions": [
+          {
+            "type": "race",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1281/japan/race-result",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 53,
+                "time": "1:28:03.403",
+                "points": 25
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": 53,
+                "time": "+13.722",
+                "points": 18
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 53,
+                "time": "+15.270",
+                "points": 15
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 53,
+                "time": "+15.754",
+                "points": 12
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": 53,
+                "time": "+23.479",
+                "points": 10
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 53,
+                "time": "+25.037",
+                "points": 8
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 53,
+                "time": "+32.340",
+                "points": 6
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": 53,
+                "time": "+32.677",
+                "points": 4
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 53,
+                "time": "+50.180",
+                "points": 2
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 53,
+                "time": "+51.216",
+                "points": 1
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 53,
+                "time": "+52.280",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": 53,
+                "time": "+56.154",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": 53,
+                "time": "+59.078",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 53,
+                "time": "+59.848",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 53,
+                "time": "+65.008",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 53,
+                "time": "+65.773",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 53,
+                "time": "+92.453",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": 52,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 52,
+                "time": "+1 lap",
+                "points": 0
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 51,
+                "time": "+2 laps",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "DNF",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "qualifying",
+            "label": "Clasificaci?n",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1281/japan/qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:28.778",
+                "points": 0
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:29.076",
+                "points": 0
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:29.132",
+                "points": 0
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:29.405",
+                "points": 0
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "1:29.409",
+                "points": 0
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "1:29.567",
+                "points": 0
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:29.691",
+                "points": 0
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:29.978",
+                "points": 0
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:30.274",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:30.319",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "1:30.262",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:30.309",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": null,
+                "time": "1:30.387",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": null,
+                "time": "1:30.495",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": null,
+                "time": "1:30.627",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:31.033",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": null,
+                "time": "1:31.088",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": null,
+                "time": "1:31.090",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:32.206",
+                "points": 0
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": null,
+                "time": "1:32.330",
+                "points": 0
+              },
+              {
+                "position": 21,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:32.646",
+                "points": 0
+              },
+              {
+                "position": 22,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": null,
+                "time": "1:32.920",
+                "points": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "series": "formula1",
+        "round": 4,
+        "gp": "Miami",
+        "country": "Estados Unidos",
+        "flag": "🇺🇸",
+        "date": "2026-05-02",
+        "sessions": [
+          {
+            "type": "race",
+            "status": "pending",
+            "results": []
+          },
+          {
+            "type": "sprintQualifying",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1284/miami/sprint-qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "1:26.482",
+                "points": 0
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "+0.045",
+                "points": 0
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "+0.100",
+                "points": 0
+              }
+            ]
+          },
+          {
+            "type": "sprint",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/racing/2026/miami",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": null,
+                "time": "29:15.045",
+                "points": 8
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": null,
+                "time": "+3.766",
+                "points": 7
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": null,
+                "time": "+6.251",
+                "points": 6
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": null,
+                "time": "+12.951",
+                "points": 5
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": null,
+                "time": "+13.639",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "type": "qualifying",
+            "status": "pending",
+            "results": []
+          }
+        ]
+      }
+    ]
+  },
+  "formula2": {
+    "timezone": "event_local_time",
+    "grand_prix": [
+      {
+        "round": 1,
+        "gp": "Melbourne",
+        "country": "Australia",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-03-06",
+            "time": "14:55"
+          },
+          "sprint_race": {
+            "date": "2026-03-07",
+            "time": "14:10"
+          },
+          "feature_race": {
+            "date": "2026-03-08",
+            "time": "11:25"
+          }
+        },
+        "timezone": "Australia/Melbourne",
+        "flag": "🇦🇺",
+        "country_code": "AU"
+      },
+      {
+        "round": 2,
+        "gp": "Miami",
+        "country": "Estados Unidos",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-05-01",
+            "time": "14:30"
+          },
+          "sprint_race": {
+            "date": "2026-05-02",
+            "time": "10:00"
+          },
+          "feature_race": {
+            "date": "2026-05-03",
+            "time": "12:30"
+          }
+        },
+        "timezone": "America/New_York",
+        "flag": "🇺🇸",
+        "country_code": "US"
+      },
+      {
+        "round": 3,
+        "gp": "Montréal",
+        "country": "Canada",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-05-22",
+            "time": "14:00"
+          },
+          "sprint_race": {
+            "date": "2026-05-23",
+            "time": "14:10"
+          },
+          "feature_race": {
+            "date": "2026-05-24",
+            "time": "12:05"
+          }
+        },
+        "timezone": "America/Toronto",
+        "flag": "🇨🇦",
+        "country_code": "CA"
+      },
+      {
+        "round": 4,
+        "gp": "Monaco",
+        "country": "Monaco",
+        "sessions": {
+          "qualifying_group_a": {
+            "date": "2026-06-05",
+            "time": "TBC"
+          },
+          "qualifying_group_b": {
+            "date": "2026-06-05",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-06-06",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-06-07",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Monaco",
+        "flag": "🇲🇨",
+        "country_code": "MC"
+      },
+      {
+        "round": 5,
+        "gp": "Barcelona",
+        "country": "Espana",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-06-12",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-06-13",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-06-14",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Madrid",
+        "flag": "🇪🇸"
+      },
+      {
+        "round": 6,
+        "gp": "Spielberg",
+        "country": "Austria",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-06-26",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-06-27",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-06-28",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Vienna",
+        "flag": "🇦🇹",
+        "country_code": "AT"
+      },
+      {
+        "round": 7,
+        "gp": "Silverstone",
+        "country": "Reino Unido",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-07-03",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-07-04",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-07-05",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/London",
+        "flag": "🇬🇧"
+      },
+      {
+        "round": 8,
+        "gp": "Spa-Francorchamps",
+        "country": "Belgica",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-07-17",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-07-18",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-07-19",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Brussels",
+        "flag": "🇧🇪"
+      },
+      {
+        "round": 9,
+        "gp": "Budapest",
+        "country": "Hungria",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-07-24",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-07-25",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-07-26",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Budapest",
+        "flag": "🇭🇺"
+      },
+      {
+        "round": 10,
+        "gp": "Monza",
+        "country": "Italia",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-09-04",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-09-05",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-09-06",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Rome",
+        "flag": "🇮🇹"
+      },
+      {
+        "round": 11,
+        "gp": "Madrid",
+        "country": "Espana",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-09-11",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-09-12",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-09-13",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Europe/Madrid",
+        "flag": "🇪🇸"
+      },
+      {
+        "round": 12,
+        "gp": "Baku",
+        "country": "Azerbaiyan",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-09-24",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-09-25",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-09-26",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Asia/Baku",
+        "flag": "🇦🇿"
+      },
+      {
+        "round": 13,
+        "gp": "Lusail",
+        "country": "Qatar",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-11-27",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-11-28",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-11-29",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Asia/Qatar",
+        "flag": "🇶🇦",
+        "country_code": "QA"
+      },
+      {
+        "round": 14,
+        "gp": "Yas Island",
+        "country": "Emiratos Arabes Unidos",
+        "sessions": {
+          "qualifying": {
+            "date": "2026-12-04",
+            "time": "TBC"
+          },
+          "sprint_race": {
+            "date": "2026-12-05",
+            "time": "TBC"
+          },
+          "feature_race": {
+            "date": "2026-12-06",
+            "time": "TBC"
+          }
+        },
+        "timezone": "Asia/Dubai",
+        "flag": "🇦🇪"
+      }
+    ],
+    "session_results": [
+      {
+        "series": "formula2",
+        "round": 2,
+        "gp": "Miami",
+        "country": "Estados Unidos",
+        "flag": "🇺🇸",
+        "date": "2026-05-02",
+        "sessions": [
+          {
+            "type": "sprint",
+            "status": "completed",
+            "source_url": "https://www.fiaformula2.com/Results?raceid=1106",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "N. Tsolov",
+                "team": "Campos Racing",
+                "laps": 23,
+                "time": "39:26.273",
+                "points": 10
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "L. van Hoepen",
+                "team": "TRIDENT",
+                "laps": 23,
+                "time": "+0.170",
+                "points": 8
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "A. Dunne",
+                "team": "Rodin Motorsport",
+                "laps": 23,
+                "time": "+1.281",
+                "points": 6
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "N. Varrone",
+                "team": "Van Amersfoort Racing",
+                "laps": 23,
+                "time": "+4.538",
+                "points": 5
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "J. Dürksen",
+                "team": "Invicta Racing",
+                "laps": 23,
+                "time": "+5.212",
+                "points": 4
+              }
+            ]
+          },
+          {
+            "type": "featureRace",
+            "status": "pending",
+            "results": []
+          }
+        ]
+      }
+    ]
+  },
+  "formula1_drivers": [
+    {
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "driver_page_url": "https://www.formula1.com/en/drivers/george-russell",
+      "team_page_url": "https://www.formula1.com/en/teams/mercedes",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "1998-02-15"
+    },
+    {
+      "driver": "Kimi Antonelli",
+      "team": "Mercedes",
+      "driver_page_url": "https://www.formula1.com/en/drivers/kimi-antonelli",
+      "team_page_url": "https://www.formula1.com/en/teams/mercedes",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/K/ANDANT01_Kimi_Antonelli/andant01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Italy",
+      "nationality_code": "IT",
+      "dateOfBirth": "2006-08-25"
+    },
+    {
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "driver_page_url": "https://www.formula1.com/en/drivers/charles-leclerc",
+      "team_page_url": "https://www.formula1.com/en/teams/ferrari",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ferrari_wordmark_vector_HQ.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Monaco",
+      "nationality_code": "MC",
+      "dateOfBirth": "1997-10-16"
+    },
+    {
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "driver_page_url": "https://www.formula1.com/en/drivers/lewis-hamilton",
+      "team_page_url": "https://www.formula1.com/en/teams/ferrari",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ferrari_wordmark_vector_HQ.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "1985-01-07"
+    },
+    {
+      "driver": "Lando Norris",
+      "team": "McLaren",
+      "driver_page_url": "https://www.formula1.com/en/drivers/lando-norris",
+      "team_page_url": "https://www.formula1.com/en/teams/mclaren",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/McLaren_Automotive_logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "1999-11-13"
+    },
+    {
+      "driver": "Oscar Piastri",
+      "team": "McLaren",
+      "driver_page_url": "https://www.formula1.com/en/drivers/oscar-piastri",
+      "team_page_url": "https://www.formula1.com/en/teams/mclaren",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/McLaren_Automotive_logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Australia",
+      "nationality_code": "AU",
+      "dateOfBirth": "2001-04-06"
+    },
+    {
+      "driver": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "driver_page_url": "https://www.formula1.com/en/drivers/max-verstappen",
+      "team_page_url": "https://www.formula1.com/en/teams/red-bull-racing",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Red_Bull_Racing_-_2015_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Netherlands",
+      "nationality_code": "NL",
+      "dateOfBirth": "1997-09-30"
+    },
+    {
+      "driver": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "driver_page_url": "https://www.formula1.com/en/drivers/isack-hadjar",
+      "team_page_url": "https://www.formula1.com/en/teams/red-bull-racing",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/I/ISAHAD01_Isack_Hadjar/isahad01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Red_Bull_Racing_-_2015_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "France",
+      "nationality_code": "FR",
+      "dateOfBirth": "2004-09-28"
+    },
+    {
+      "driver": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "driver_page_url": "https://www.formula1.com/en/drivers/esteban-ocon",
+      "team_page_url": "https://www.formula1.com/en/teams/haas-f1-team",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/E/ESTOCO01_Esteban_Ocon/estoco01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Haas_F1_Team_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "France",
+      "nationality_code": "FR",
+      "dateOfBirth": "1996-09-17"
+    },
+    {
+      "driver": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "driver_page_url": "https://www.formula1.com/en/drivers/oliver-bearman",
+      "team_page_url": "https://www.formula1.com/en/teams/haas-f1-team",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OLIBEA01_Oliver_Bearman/olibea01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Haas_F1_Team_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "2005-05-08"
+    },
+    {
+      "driver": "Pierre Gasly",
+      "team": "Alpine",
+      "driver_page_url": "https://www.formula1.com/en/drivers/pierre-gasly",
+      "team_page_url": "https://www.formula1.com/en/teams/alpine",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/P/PIEGAS01_Pierre_Gasly/piegas01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Alpine_F1_Team_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "France",
+      "nationality_code": "FR",
+      "dateOfBirth": "1996-02-07"
+    },
+    {
+      "driver": "Franco Colapinto",
+      "team": "Alpine",
+      "driver_page_url": "https://www.formula1.com/en/drivers/franco-colapinto",
+      "team_page_url": "https://www.formula1.com/en/teams/alpine",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FRACOL01_Franco_Colapinto/fracol01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Alpine_F1_Team_Logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Argentina",
+      "nationality_code": "AR",
+      "dateOfBirth": "2003-05-27"
+    },
+    {
+      "driver": "Liam Lawson",
+      "team": "Racing Bulls",
+      "driver_page_url": "https://www.formula1.com/en/drivers/liam-lawson",
+      "team_page_url": "https://www.formula1.com/en/teams/racing-bulls",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/1col/image.png",
+      "team_logo_url": null,
+      "team_logo_note": "No stable direct logo asset verified in this pass; keep team_page_url as fallback.",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": null,
+      "nationality": "New Zealand",
+      "nationality_code": "NZ",
+      "dateOfBirth": "2002-02-11"
+    },
+    {
+      "driver": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "driver_page_url": "https://www.formula1.com/en/drivers/arvid-lindblad",
+      "team_page_url": "https://www.formula1.com/en/teams/racing-bulls",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/A/ARVLIN01_Arvid_Lindblad/arvlin01.png.transform/1col/image.png",
+      "team_logo_url": null,
+      "team_logo_note": "No stable direct logo asset verified in this pass; keep team_page_url as fallback.",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": null,
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "2007-08-08"
+    },
+    {
+      "driver": "Nico Hulkenberg",
+      "team": "Audi",
+      "driver_page_url": "https://www.formula1.com/en/drivers/nico-hulkenberg",
+      "team_page_url": "https://www.formula1.com/en/teams/audi",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/N/NICHUL01_Nico_Hulkenberg/nichul01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Audif1.com_logo17.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Germany",
+      "nationality_code": "DE",
+      "dateOfBirth": "1987-08-19"
+    },
+    {
+      "driver": "Gabriel Bortoleto",
+      "team": "Audi",
+      "driver_page_url": "https://www.formula1.com/en/drivers/gabriel-bortoleto",
+      "team_page_url": "https://www.formula1.com/en/teams/audi",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GABBOR01_Gabriel_Bortoleto/gabbor01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Audif1.com_logo17.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Brazil",
+      "nationality_code": "BR",
+      "dateOfBirth": "2004-10-14"
+    },
+    {
+      "driver": "Carlos Sainz",
+      "team": "Williams",
+      "driver_page_url": "https://www.formula1.com/en/drivers/carlos-sainz",
+      "team_page_url": "https://www.formula1.com/en/teams/williams",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CARSAI01_Carlos_Sainz/carsai01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Atlassian_Williams_F1_Team_logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Spain",
+      "nationality_code": "ES",
+      "dateOfBirth": "1994-09-01"
+    },
+    {
+      "driver": "Alexander Albon",
+      "team": "Williams",
+      "driver_page_url": "https://www.formula1.com/en/drivers/alexander-albon",
+      "team_page_url": "https://www.formula1.com/en/teams/williams",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Atlassian_Williams_F1_Team_logo.svg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Thailand",
+      "nationality_code": "TH",
+      "dateOfBirth": "1996-03-23"
+    },
+    {
+      "driver": "Sergio Perez",
+      "team": "Cadillac",
+      "driver_page_url": "https://www.formula1.com/en/drivers/sergio-perez",
+      "team_page_url": "https://www.formula1.com/en/teams/cadillac",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cadillac_Formula_1_Team_logo.png",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Mexico",
+      "nationality_code": "MX",
+      "dateOfBirth": "1990-01-26"
+    },
+    {
+      "driver": "Valtteri Bottas",
+      "team": "Cadillac",
+      "driver_page_url": "https://www.formula1.com/en/drivers/valtteri-bottas",
+      "team_page_url": "https://www.formula1.com/en/teams/cadillac",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cadillac_Formula_1_Team_logo.png",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Finland",
+      "nationality_code": "FI",
+      "dateOfBirth": "1989-08-28"
+    },
+    {
+      "driver": "Fernando Alonso",
+      "team": "Aston Martin",
+      "driver_page_url": "https://www.formula1.com/en/drivers/fernando-alonso",
+      "team_page_url": "https://www.formula1.com/en/teams/aston-martin",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FERALO01_Fernando_Alonso/feralo01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Aston_Martin_F1_Team_logo_2024.jpg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Spain",
+      "nationality_code": "ES",
+      "dateOfBirth": "1981-07-29"
+    },
+    {
+      "driver": "Lance Stroll",
+      "team": "Aston Martin",
+      "driver_page_url": "https://www.formula1.com/en/drivers/lance-stroll",
+      "team_page_url": "https://www.formula1.com/en/teams/aston-martin",
+      "driver_image_url": "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANSTR01_Lance_Stroll/lanstr01.png.transform/1col/image.png",
+      "team_logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Aston_Martin_F1_Team_logo_2024.jpg",
+      "driver_image_source": "OpenF1 / official Formula 1 media headshot",
+      "team_logo_source": "Wikimedia Commons/public logo asset",
+      "nationality": "Canada",
+      "nationality_code": "CA",
+      "dateOfBirth": "1998-10-29"
+    }
+  ],
+  "formula1_standings": {
+    "drivers": [
+      {
+        "position": 1,
+        "driver": "Kimi Antonelli",
+        "team": "Mercedes",
+        "points": 75
+      },
+      {
+        "position": 2,
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "points": 68
+      },
+      {
+        "position": 3,
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "points": 55
+      },
+      {
+        "position": 4,
+        "driver": "Lewis Hamilton",
+        "team": "Ferrari",
+        "points": 43
+      },
+      {
+        "position": 5,
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "points": 33
+      },
+      {
+        "position": 6,
+        "driver": "Oscar Piastri",
+        "team": "McLaren",
+        "points": 28
+      },
+      {
+        "position": 7,
+        "driver": "Oliver Bearman",
+        "team": "Haas F1 Team",
+        "points": 17
+      },
+      {
+        "position": 8,
+        "driver": "Pierre Gasly",
+        "team": "Alpine",
+        "points": 16
+      },
+      {
+        "position": 9,
+        "driver": "Max Verstappen",
+        "team": "Red Bull Racing",
+        "points": 16
+      },
+      {
+        "position": 10,
+        "driver": "Liam Lawson",
+        "team": "Racing Bulls",
+        "points": 10
+      },
+      {
+        "position": 11,
+        "driver": "Arvid Lindblad",
+        "team": "Racing Bulls",
+        "points": 4
+      },
+      {
+        "position": 12,
+        "driver": "Isack Hadjar",
+        "team": "Red Bull Racing",
+        "points": 4
+      },
+      {
+        "position": 13,
+        "driver": "Gabriel Bortoleto",
+        "team": "Audi",
+        "points": 2
+      },
+      {
+        "position": 14,
+        "driver": "Carlos Sainz",
+        "team": "Williams",
+        "points": 2
+      },
+      {
+        "position": 15,
+        "driver": "Esteban Ocon",
+        "team": "Haas F1 Team",
+        "points": 1
+      },
+      {
+        "position": 16,
+        "driver": "Franco Colapinto",
+        "team": "Alpine",
+        "points": 1
+      },
+      {
+        "position": 17,
+        "driver": "Nico Hulkenberg",
+        "team": "Audi",
+        "points": 0
+      },
+      {
+        "position": 18,
+        "driver": "Alexander Albon",
+        "team": "Williams",
+        "points": 0
+      },
+      {
+        "position": 19,
+        "driver": "Valtteri Bottas",
+        "team": "Cadillac",
+        "points": 0
+      },
+      {
+        "position": 20,
+        "driver": "Sergio Perez",
+        "team": "Cadillac",
+        "points": 0
+      },
+      {
+        "position": 21,
+        "driver": "Fernando Alonso",
+        "team": "Aston Martin",
+        "points": 0
+      },
+      {
+        "position": 22,
+        "driver": "Lance Stroll",
+        "team": "Aston Martin",
+        "points": 0
+      }
+    ]
+  },
+  "formula2_standings": {
+    "drivers": [
+      {
+        "position": 1,
+        "driver": "N. Tsolov",
+        "team": "Campos Racing",
+        "points": 25
+      },
+      {
+        "position": 2,
+        "driver": "R. Câmara",
+        "team": "Invicta Racing",
+        "points": 18
+      },
+      {
+        "position": 3,
+        "driver": "L. van Hoepen",
+        "team": "TRIDENT",
+        "points": 18
+      },
+      {
+        "position": 4,
+        "driver": "R. Miyata",
+        "team": "Hitech TGR",
+        "points": 14
+      },
+      {
+        "position": 5,
+        "driver": "T. Inthraphuvasak",
+        "team": "ART Grand Prix",
+        "points": 13
+      },
+      {
+        "position": 6,
+        "driver": "O. Goethe",
+        "team": "MP Motorsport",
+        "points": 12
+      },
+      {
+        "position": 7,
+        "driver": "J. Dürksen",
+        "team": "Invicta Racing",
+        "points": 11
+      },
+      {
+        "position": 8,
+        "driver": "N. León",
+        "team": "Campos Racing",
+        "points": 8
+      },
+      {
+        "position": 9,
+        "driver": "G. Minì",
+        "team": "MP Motorsport",
+        "points": 7
+      },
+      {
+        "position": 10,
+        "driver": "A. Dunne",
+        "team": "Rodin Motorsport",
+        "points": 6
+      },
+      {
+        "position": 11,
+        "driver": "C. Herta",
+        "team": "Hitech TGR",
+        "points": 6
+      },
+      {
+        "position": 12,
+        "driver": "S. Montoya",
+        "team": "PREMA Racing",
+        "points": 2
+      },
+      {
+        "position": 13,
+        "driver": "D. Beganovic",
+        "team": "DAMS Lucas Oil",
+        "points": 2
+      },
+      {
+        "position": 14,
+        "driver": "R. Bilinski",
+        "team": "DAMS Lucas Oil",
+        "points": 1
+      },
+      {
+        "position": 15,
+        "driver": "M. Stenshorne",
+        "team": "Rodin Motorsport",
+        "points": 1
+      },
+      {
+        "position": 16,
+        "driver": "K. Maini",
+        "team": "DAMS Lucas Oil",
+        "points": 0
+      },
+      {
+        "position": 17,
+        "driver": "M. Boya",
+        "team": "PREMA Racing",
+        "points": 0
+      },
+      {
+        "position": 18,
+        "driver": "E. Fittipaldi",
+        "team": "AIX Racing",
+        "points": 0
+      }
+    ]
+  },
+  "formula2_drivers": [
+    {
+      "driver": "N. Tsolov",
+      "team": "Campos Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "R. Câmara",
+      "team": "Invicta Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "L. van Hoepen",
+      "team": "TRIDENT",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "R. Miyata",
+      "team": "Hitech TGR",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "T. Inthraphuvasak",
+      "team": "ART Grand Prix",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "O. Goethe",
+      "team": "MP Motorsport",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "J. Dürksen",
+      "team": "Invicta Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "N. León",
+      "team": "Campos Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "G. Minì",
+      "team": "MP Motorsport",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "A. Dunne",
+      "team": "Rodin Motorsport",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "C. Herta",
+      "team": "Hitech TGR",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "S. Montoya",
+      "team": "PREMA Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "D. Beganovic",
+      "team": "DAMS Lucas Oil",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "R. Bilinski",
+      "team": "DAMS Lucas Oil",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "M. Stenshorne",
+      "team": "Rodin Motorsport",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "K. Maini",
+      "team": "DAMS Lucas Oil",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "M. Boya",
+      "team": "PREMA Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    },
+    {
+      "driver": "E. Fittipaldi",
+      "team": "AIX Racing",
+      "driver_image_url": null,
+      "team_logo_url": null
+    }
+  ]
+}
