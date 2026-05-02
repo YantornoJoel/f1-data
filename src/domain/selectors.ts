@@ -1,4 +1,4 @@
-import type { DriverProfile, DriverStanding, EnrichedEvent, EventResult, F1Data, GrandPrix, RaceResult, Series, SessionKey } from './f1';
+import type { ConstructorStanding, DriverProfile, DriverStanding, EnrichedEvent, EventResult, F1Data, GrandPrix, RaceResult, Series, SessionKey } from './f1';
 import { getCountryFlag } from '../utils/countries';
 import { zonedSessionToDate } from '../utils/dates';
 
@@ -90,7 +90,19 @@ export const getCompletedF1Results = (data: F1Data, referenceDate: Date): RaceRe
 export const getDriverStandings = (data: F1Data, series: Series = 'formula1'): DriverStanding[] =>
   [...(series === 'formula1' ? data.formula1_standings.drivers : data.formula2_standings?.drivers ?? [])].sort((left, right) => left.position - right.position);
 
+export const getConstructorStandings = (data: F1Data): ConstructorStanding[] =>
+  [...(data.formula1_standings.constructors ?? [])].sort((left, right) => right.points - left.points || left.position - right.position);
+
 const getDriverProfiles = (data: F1Data, series: Series): DriverProfile[] => (series === 'formula1' ? data.formula1_drivers : data.formula2_drivers ?? []);
+
+export const getConstructorsWithLogo = (data: F1Data): Array<ConstructorStanding & { logoUrl: string | null }> => {
+  const logoByTeam = new Map(data.formula1_drivers.map((driver) => [driver.team, driver.team_logo_url]));
+
+  return getConstructorStandings(data).map((constructor) => ({
+    ...constructor,
+    logoUrl: logoByTeam.get(constructor.team) ?? null,
+  }));
+};
 
 export const getDriversWithStanding = (data: F1Data, series: Series = 'formula1'): Array<DriverProfile & { points: number; position: number }> => {
   const standingsByDriver = new Map(getDriverStandings(data, series).map((standing) => [standing.driver, standing]));

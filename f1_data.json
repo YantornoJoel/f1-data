@@ -8,7 +8,9 @@
       "For F2, both sprint_race and feature_race are included because the championship runs two race sessions per round.",
       "Direct stable image URLs for driver headshots and team logos were not reliably exposed in the parsed official HTML, so those fields are null and official page URLs are included instead.",
       "Formula 1 race results include full classified/NC rows for Australia, China and Japan as published before the Miami race weekend on 2026-05-02.",
-      "Formula 2 event times are event-local when known; the app converts known times to America/Argentina/Buenos_Aires using Intl. TBC remains visible as TBC."
+      "Formula 2 event times are event-local when known; the app converts known times to America/Argentina/Buenos_Aires using Intl. TBC remains visible as TBC.",
+      "Miami 2026 Sprint Qualifying, Sprint and Qualifying were loaded from official Formula1.com results consulted on 2026-05-02; Miami Race remains pending because the official race-result page had no results available.",
+      "Formula 1 constructor standings are stored manually from official Formula1.com team standings consulted on 2026-05-02 and are not recalculated from session results."
     ],
     "sources": {
       "f1_calendar": "https://www.formula1.com/en/racing/2026",
@@ -18,7 +20,12 @@
       "f2_calendar": "https://www.fiaformula2.com/Calendar?seasonid=183",
       "f2_standings": "https://www.fiaformula2.com/Standings/Driver",
       "f1_race_results": "https://www.formula1.com/en/results/2026/races",
-      "f2_revised_calendar": "https://www.fia.com/news/miami-and-montreal-host-fia-formula-2-championship-rounds-2026"
+      "f2_revised_calendar": "https://www.fia.com/news/miami-and-montreal-host-fia-formula-2-championship-rounds-2026",
+      "f1_constructor_standings": "https://www.formula1.com/en/results/2026/team",
+      "f1_miami_sprint_qualifying": "https://www.formula1.com/en/results/2026/races/1284/miami/sprint-qualifying",
+      "f1_miami_sprint": "https://www.formula1.com/en/results/2026/races/1284/miami/sprint-results",
+      "f1_miami_qualifying": "https://www.formula1.com/en/results/2026/races/1284/miami/qualifying",
+      "f1_miami_race_result": "https://www.formula1.com/en/results/2026/races/1284/miami/race-result/"
     },
     "asset_version": 2,
     "asset_notes": [
@@ -3004,53 +3011,282 @@
           {
             "type": "race",
             "status": "pending",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1284/miami/race-result/",
             "results": []
           },
           {
             "type": "sprintQualifying",
+            "label": "Clasificaci?n Sprint",
             "status": "completed",
             "source_url": "https://www.formula1.com/en/results/2026/races/1284/miami/sprint-qualifying",
             "results": [
               {
                 "position": 1,
                 "status": "classified",
-                "driver": "Kimi Antonelli",
-                "team": "Mercedes",
-                "laps": null,
-                "time": "1:26.482",
-                "points": 0
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": 15,
+                "time": "1:27.869",
+                "points": 0,
+                "q1": "1:28.723",
+                "q2": "1:29.366",
+                "q3": "1:27.869"
               },
               {
                 "position": 2,
                 "status": "classified",
-                "driver": "Oscar Piastri",
-                "team": "McLaren",
-                "laps": null,
-                "time": "+0.045",
-                "points": 0
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 14,
+                "time": "1:28.091",
+                "points": 0,
+                "q1": "1:29.312",
+                "q2": "1:29.209",
+                "q3": "1:28.091"
               },
               {
                 "position": 3,
                 "status": "classified",
-                "driver": "Lando Norris",
+                "driver": "Oscar Piastri",
                 "team": "McLaren",
-                "laps": null,
-                "time": "+0.100",
-                "points": 0
+                "laps": 11,
+                "time": "1:28.108",
+                "points": 0,
+                "q1": "1:29.169",
+                "q2": "1:28.506",
+                "q3": "1:28.108"
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 15,
+                "time": "1:28.239",
+                "points": 0,
+                "q1": "1:28.733",
+                "q2": "1:28.333",
+                "q3": "1:28.239"
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": 12,
+                "time": "1:28.461",
+                "points": 0,
+                "q1": "1:29.801",
+                "q2": "1:29.093",
+                "q3": "1:28.461"
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 15,
+                "time": "1:28.493",
+                "points": 0,
+                "q1": "1:29.659",
+                "q2": "1:28.903",
+                "q3": "1:28.493"
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 15,
+                "time": "1:28.618",
+                "points": 0,
+                "q1": "1:29.255",
+                "q2": "1:28.841",
+                "q3": "1:28.618"
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 15,
+                "time": "1:29.320",
+                "points": 0,
+                "q1": "1:30.386",
+                "q2": "1:29.527",
+                "q3": "1:29.320"
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": 15,
+                "time": "1:29.422",
+                "points": 0,
+                "q1": "1:30.352",
+                "q2": "1:29.750",
+                "q3": "1:29.422"
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 15,
+                "time": "1:29.474",
+                "points": 0,
+                "q1": "1:29.984",
+                "q2": "1:29.973",
+                "q3": "1:29.474"
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": 12,
+                "time": "1:29.994",
+                "points": 0,
+                "q1": "1:30.561",
+                "q2": "1:29.994",
+                "q3": null
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 12,
+                "time": "1:30.019",
+                "points": 0,
+                "q1": "1:30.270",
+                "q2": "1:30.019",
+                "q3": null
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": 9,
+                "time": "1:30.116",
+                "points": 0,
+                "q1": "1:30.614",
+                "q2": "1:30.116",
+                "q3": null
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 12,
+                "time": "1:30.224",
+                "points": 0,
+                "q1": "1:30.987",
+                "q2": "1:30.224",
+                "q3": null
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 9,
+                "time": "1:30.573",
+                "points": 0,
+                "q1": "1:30.872",
+                "q2": "1:30.573",
+                "q3": null
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 5,
+                "time": "1:31.043",
+                "points": 0,
+                "q1": "1:31.043",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 6,
+                "time": "1:31.245",
+                "points": 0,
+                "q1": "1:31.245",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 3,
+                "time": "1:31.255",
+                "points": 0,
+                "q1": "1:31.255",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 6,
+                "time": "1:30.216",
+                "points": 0,
+                "q1": "1:31.322",
+                "q2": "1:30.216",
+                "q3": null,
+                "note": "Albon's SQ1 lap time of 1.30.988 deleted for track limits, all SQ2 lap times subsequently deleted."
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 6,
+                "time": "1:31.826",
+                "points": 0,
+                "q1": "1:31.826",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": 6,
+                "time": "1:41.311",
+                "points": 0,
+                "q1": "1:41.311",
+                "q2": null,
+                "q3": null
               }
             ]
           },
           {
             "type": "sprint",
+            "label": "Sprint",
             "status": "completed",
-            "source_url": "https://www.formula1.com/en/racing/2026/miami",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1284/miami/sprint-results",
             "results": [
               {
                 "position": 1,
                 "status": "classified",
                 "driver": "Lando Norris",
                 "team": "McLaren",
-                "laps": null,
+                "laps": 19,
                 "time": "29:15.045",
                 "points": 8
               },
@@ -3059,8 +3295,8 @@
                 "status": "classified",
                 "driver": "Oscar Piastri",
                 "team": "McLaren",
-                "laps": null,
-                "time": "+3.766",
+                "laps": 19,
+                "time": "+3.766s",
                 "points": 7
               },
               {
@@ -3068,8 +3304,8 @@
                 "status": "classified",
                 "driver": "Charles Leclerc",
                 "team": "Ferrari",
-                "laps": null,
-                "time": "+6.251",
+                "laps": 19,
+                "time": "+6.251s",
                 "points": 6
               },
               {
@@ -3077,8 +3313,8 @@
                 "status": "classified",
                 "driver": "George Russell",
                 "team": "Mercedes",
-                "laps": null,
-                "time": "+12.951",
+                "laps": 19,
+                "time": "+12.951s",
                 "points": 5
               },
               {
@@ -3086,16 +3322,436 @@
                 "status": "classified",
                 "driver": "Max Verstappen",
                 "team": "Red Bull Racing",
-                "laps": null,
-                "time": "+13.639",
+                "laps": 19,
+                "time": "+13.639s",
                 "points": 4
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 19,
+                "time": "+13.777s",
+                "points": 3
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 19,
+                "time": "+21.665s",
+                "points": 2
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 19,
+                "time": "+30.525s",
+                "points": 1
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": 19,
+                "time": "+35.346s",
+                "points": 0
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 19,
+                "time": "+36.970s",
+                "points": 0
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 19,
+                "time": "+56.972s",
+                "points": 0
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": 19,
+                "time": "+57.365s",
+                "points": 0
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 19,
+                "time": "+58.504s",
+                "points": 0
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 19,
+                "time": "+59.358s",
+                "points": 0
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": 19,
+                "time": "+76.067s",
+                "points": 0
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 19,
+                "time": "+76.691s",
+                "points": 0
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": 19,
+                "time": "+77.626s",
+                "points": 0
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 19,
+                "time": "+88.173s",
+                "points": 0
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 19,
+                "time": "+89.597s",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 0,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "NC",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 0,
+                "time": "DNS",
+                "points": 0
+              },
+              {
+                "position": null,
+                "status": "DQ",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": null,
+                "time": "DSQ",
+                "points": 0
               }
             ]
           },
           {
             "type": "qualifying",
-            "status": "pending",
-            "results": []
+            "label": "Clasificaci?n",
+            "status": "completed",
+            "source_url": "https://www.formula1.com/en/results/2026/races/1284/miami/qualifying",
+            "results": [
+              {
+                "position": 1,
+                "status": "classified",
+                "driver": "Kimi Antonelli",
+                "team": "Mercedes",
+                "laps": 17,
+                "time": "1:27.798",
+                "points": 0,
+                "q1": "1:28.653",
+                "q2": "1:28.289",
+                "q3": "1:27.798"
+              },
+              {
+                "position": 2,
+                "status": "classified",
+                "driver": "Max Verstappen",
+                "team": "Red Bull Racing",
+                "laps": 15,
+                "time": "1:27.964",
+                "points": 0,
+                "q1": "1:29.099",
+                "q2": "1:28.116",
+                "q3": "1:27.964"
+              },
+              {
+                "position": 3,
+                "status": "classified",
+                "driver": "Charles Leclerc",
+                "team": "Ferrari",
+                "laps": 21,
+                "time": "1:28.143",
+                "points": 0,
+                "q1": "1:28.938",
+                "q2": "1:28.315",
+                "q3": "1:28.143"
+              },
+              {
+                "position": 4,
+                "status": "classified",
+                "driver": "Lando Norris",
+                "team": "McLaren",
+                "laps": 20,
+                "time": "1:28.183",
+                "points": 0,
+                "q1": "1:29.183",
+                "q2": "1:28.920",
+                "q3": "1:28.183"
+              },
+              {
+                "position": 5,
+                "status": "classified",
+                "driver": "George Russell",
+                "team": "Mercedes",
+                "laps": 18,
+                "time": "1:28.197",
+                "points": 0,
+                "q1": "1:29.492",
+                "q2": "1:28.477",
+                "q3": "1:28.197"
+              },
+              {
+                "position": 6,
+                "status": "classified",
+                "driver": "Lewis Hamilton",
+                "team": "Ferrari",
+                "laps": 21,
+                "time": "1:28.319",
+                "points": 0,
+                "q1": "1:29.483",
+                "q2": "1:28.477",
+                "q3": "1:28.319"
+              },
+              {
+                "position": 7,
+                "status": "classified",
+                "driver": "Oscar Piastri",
+                "team": "McLaren",
+                "laps": 20,
+                "time": "1:28.500",
+                "points": 0,
+                "q1": "1:29.920",
+                "q2": "1:28.332",
+                "q3": "1:28.500"
+              },
+              {
+                "position": 8,
+                "status": "classified",
+                "driver": "Franco Colapinto",
+                "team": "Alpine",
+                "laps": 19,
+                "time": "1:28.762",
+                "points": 0,
+                "q1": "1:29.584",
+                "q2": "1:28.975",
+                "q3": "1:28.762"
+              },
+              {
+                "position": 9,
+                "status": "classified",
+                "driver": "Isack Hadjar",
+                "team": "Red Bull Racing",
+                "laps": 21,
+                "time": "1:28.789",
+                "points": 0,
+                "q1": "1:29.324",
+                "q2": "1:28.941",
+                "q3": "1:28.789"
+              },
+              {
+                "position": 10,
+                "status": "classified",
+                "driver": "Pierre Gasly",
+                "team": "Alpine",
+                "laps": 20,
+                "time": "1:28.810",
+                "points": 0,
+                "q1": "1:29.914",
+                "q2": "1:29.070",
+                "q3": "1:28.810"
+              },
+              {
+                "position": 11,
+                "status": "classified",
+                "driver": "Nico Hulkenberg",
+                "team": "Audi",
+                "laps": 14,
+                "time": "1:29.439",
+                "points": 0,
+                "q1": "1:29.645",
+                "q2": "1:29.439",
+                "q3": null
+              },
+              {
+                "position": 12,
+                "status": "classified",
+                "driver": "Liam Lawson",
+                "team": "Racing Bulls",
+                "laps": 14,
+                "time": "1:29.499",
+                "points": 0,
+                "q1": "1:29.595",
+                "q2": "1:29.499",
+                "q3": null
+              },
+              {
+                "position": 13,
+                "status": "classified",
+                "driver": "Oliver Bearman",
+                "team": "Haas F1 Team",
+                "laps": 12,
+                "time": "1:29.567",
+                "points": 0,
+                "q1": "1:29.340",
+                "q2": "1:29.567",
+                "q3": null
+              },
+              {
+                "position": 14,
+                "status": "classified",
+                "driver": "Carlos Sainz",
+                "team": "Williams",
+                "laps": 15,
+                "time": "1:29.568",
+                "points": 0,
+                "q1": "1:29.540",
+                "q2": "1:29.568",
+                "q3": null
+              },
+              {
+                "position": 15,
+                "status": "classified",
+                "driver": "Esteban Ocon",
+                "team": "Haas F1 Team",
+                "laps": 15,
+                "time": "1:29.772",
+                "points": 0,
+                "q1": "1:29.838",
+                "q2": "1:29.772",
+                "q3": null
+              },
+              {
+                "position": 16,
+                "status": "classified",
+                "driver": "Alexander Albon",
+                "team": "Williams",
+                "laps": 15,
+                "time": "1:29.946",
+                "points": 0,
+                "q1": "1:29.720",
+                "q2": "1:29.946",
+                "q3": null
+              },
+              {
+                "position": 17,
+                "status": "classified",
+                "driver": "Arvid Lindblad",
+                "team": "Racing Bulls",
+                "laps": 9,
+                "time": "1:30.133",
+                "points": 0,
+                "q1": "1:30.133",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 18,
+                "status": "classified",
+                "driver": "Fernando Alonso",
+                "team": "Aston Martin",
+                "laps": 8,
+                "time": "1:31.098",
+                "points": 0,
+                "q1": "1:31.098",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 19,
+                "status": "classified",
+                "driver": "Lance Stroll",
+                "team": "Aston Martin",
+                "laps": 9,
+                "time": "1:31.164",
+                "points": 0,
+                "q1": "1:31.164",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 20,
+                "status": "classified",
+                "driver": "Valtteri Bottas",
+                "team": "Cadillac",
+                "laps": 9,
+                "time": "1:31.629",
+                "points": 0,
+                "q1": "1:31.629",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 21,
+                "status": "classified",
+                "driver": "Sergio Perez",
+                "team": "Cadillac",
+                "laps": 9,
+                "time": "1:31.967",
+                "points": 0,
+                "q1": "1:31.967",
+                "q2": null,
+                "q3": null
+              },
+              {
+                "position": 22,
+                "status": "classified",
+                "driver": "Gabriel Bortoleto",
+                "team": "Audi",
+                "laps": 3,
+                "time": "1:33.737",
+                "points": 0,
+                "q1": "1:33.737",
+                "q2": null,
+                "q3": null
+              }
+            ]
           }
         ]
       }
@@ -3900,6 +4556,63 @@
       {
         "position": 22,
         "driver": "Lance Stroll",
+        "team": "Aston Martin",
+        "points": 0
+      }
+    ],
+    "constructors": [
+      {
+        "position": 1,
+        "team": "Mercedes",
+        "points": 143
+      },
+      {
+        "position": 2,
+        "team": "Ferrari",
+        "points": 98
+      },
+      {
+        "position": 3,
+        "team": "McLaren",
+        "points": 61
+      },
+      {
+        "position": 4,
+        "team": "Red Bull Racing",
+        "points": 20
+      },
+      {
+        "position": 5,
+        "team": "Haas F1 Team",
+        "points": 18
+      },
+      {
+        "position": 6,
+        "team": "Alpine",
+        "points": 17
+      },
+      {
+        "position": 7,
+        "team": "Racing Bulls",
+        "points": 14
+      },
+      {
+        "position": 8,
+        "team": "Audi",
+        "points": 2
+      },
+      {
+        "position": 9,
+        "team": "Williams",
+        "points": 2
+      },
+      {
+        "position": 10,
+        "team": "Cadillac",
+        "points": 0
+      },
+      {
+        "position": 11,
         "team": "Aston Martin",
         "points": 0
       }

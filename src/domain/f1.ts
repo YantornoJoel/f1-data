@@ -56,14 +56,24 @@ export interface DriverStanding {
   points: number;
 }
 
+export interface ConstructorStanding {
+  position: number;
+  team: string;
+  points: number;
+}
+
 export interface ClassifiedResult {
   position: number | null;
-  status: 'classified' | 'NC' | 'pending';
+  status: 'classified' | 'NC' | 'DQ' | 'pending';
   driver: string;
   team: string;
   laps: number | null;
   time: string;
   points: number;
+  q1?: string | null;
+  q2?: string | null;
+  q3?: string | null;
+  note?: string;
 }
 
 export interface RaceWinner {
@@ -127,6 +137,7 @@ export interface F1Data {
   formula2_drivers?: DriverProfile[];
   formula1_standings: {
     drivers: DriverStanding[];
+    constructors?: ConstructorStanding[];
   };
   formula2_standings?: {
     drivers: DriverStanding[];

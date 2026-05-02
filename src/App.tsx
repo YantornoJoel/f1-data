@@ -1,4 +1,5 @@
-﻿import { CalendarSection } from './components/CalendarSection';
+import { CalendarSection } from './components/CalendarSection';
+import { ConstructorsStandings } from './components/ConstructorsStandings';
 import { CountryFlag } from './components/CountryFlag';
 import { DriversGrid } from './components/DriversGrid';
 import { F1CarHero } from './components/F1CarHero';
@@ -7,7 +8,7 @@ import { SectionHeader } from './components/SectionHeader';
 import { StandingsTable } from './components/StandingsTable';
 import { StatCard } from './components/StatCard';
 import { f1Data } from './data/f1Data';
-import { getCompletedResults, getDriverStandings, getDriversWithStanding, getLeader, getNextEvent, getUpcomingEvents } from './domain/selectors';
+import { getCompletedResults, getConstructorsWithLogo, getDriverStandings, getDriversWithStanding, getLeader, getNextEvent, getUpcomingEvents } from './domain/selectors';
 import { formatArgentinaDateTime } from './utils/dates';
 import { getTeamColor, pluralize } from './utils/format';
 import './index.css';
@@ -25,16 +26,17 @@ const App = () => {
   const f2Standings = getDriverStandings(f1Data, 'formula2');
   const f1Drivers = getDriversWithStanding(f1Data, 'formula1');
   const f2Drivers = getDriversWithStanding(f1Data, 'formula2');
+  const constructors = getConstructorsWithLogo(f1Data);
 
   return (
     <main className="app-shell">
       <section className="hero">
         <F1CarHero />
         <div className="hero__content">
-          <span className="eyebrow">Temporada {f1Data.meta.season} · actualizado {f1Data.meta.generated_on}</span>
+          <span className="eyebrow">Temporada {f1Data.meta.season} - actualizado {f1Data.meta.generated_on}</span>
           <h1>Panel F1 2026</h1>
           <p>
-            Calendario, resultados, campeonato y parrilla de pilotos para seguir la temporada con horarios claros en Argentina.
+            Calendario, resultados, campeonato y parrilla de pilotos para seguir la temporada.
           </p>
           <div className="hero__actions">
             <a href="#calendario" className="primary-button">Ver calendario</a>
@@ -67,18 +69,19 @@ const App = () => {
       <SectionHeader
         eyebrow="Calendario"
         title="Próximas fechas"
-        description="Todos los horarios se muestran convertidos a Argentina para que no tengas que hacer cuentas raras. Es así de fácil."
+        description="Las carreras finalizadas se muestran en la sección de Resultados"
       />
       <CalendarSection f1Events={upcomingF1Events} f2Events={upcomingF2Events} />
 
       <SectionHeader
         eyebrow="Resultados"
         title="Sesiones disputadas"
-        description="Alterná entre F1 y F2. Si una sesión todavía no terminó, queda marcada como pendiente: no inventamos datos, hermano."
+        description="Alterná entre F1 y F2. Si una sesión todavía no terminó, queda marcada como pendiente."
       />
       <ResultsSection f1Results={completedF1Results} f2Results={completedF2Results} />
 
       <StandingsTable f1Standings={f1Standings} f2Standings={f2Standings} f1Drivers={f1Drivers} f2Drivers={f2Drivers} />
+      <ConstructorsStandings constructors={constructors} />
 
       <SectionHeader
         eyebrow="Parrilla"
@@ -88,7 +91,7 @@ const App = () => {
       <DriversGrid f1Drivers={f1Drivers} f2Drivers={f2Drivers} />
 
       <footer className="app-footer">
-        <span>Hecho para leer rápido: horarios Argentina, banderas y sesiones separadas.</span>
+        <span>Horarios Argentinos -  Joel Yantorno</span>
       </footer>
     </main>
   );

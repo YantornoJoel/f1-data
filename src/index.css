@@ -1002,6 +1002,61 @@ span.country-flag {
   color: #f8fafc;
 }
 
+.constructors-section {
+  margin-top: -34px;
+}
+
+.constructors-panel {
+  gap: 10px;
+}
+
+.constructor-row {
+  display: grid;
+  grid-template-columns: 64px 130px 1fr 70px;
+  gap: 14px;
+  align-items: center;
+  padding: 13px;
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--team-color), transparent 86%), rgba(255, 255, 255, 0.052)),
+    rgba(255, 255, 255, 0.052);
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.constructor-row:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.24);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--team-color), transparent 78%), rgba(255, 255, 255, 0.08)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: 0 26px 68px rgba(0, 0, 0, 0.34), 0 0 0 1px color-mix(in srgb, var(--team-color), transparent 72%);
+}
+
+.constructor-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 118px;
+  min-height: 42px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.95), rgba(226, 232, 240, 0.86));
+}
+
+.constructor-logo img {
+  display: block;
+  width: 100%;
+  height: 28px;
+  object-fit: contain;
+}
+
+.constructor-logo--fallback {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  font-weight: 900;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1383,7 +1438,11 @@ span.country-flag {
   }
 
   .standing-row { grid-template-columns: 44px 46px 1fr; }
+  .constructor-row { grid-template-columns: 38px 86px 1fr; gap: 9px; padding: 10px; }
+  .constructor-logo { width: 82px; min-height: 34px; padding: 5px 7px; }
+  .constructor-logo img { height: 22px; }
   .standing-row__points { grid-column: 3; }
+  .constructor-row .standing-row__points { grid-column: 3; justify-self: start; }
   .team-card {
     padding: 12px;
     border-radius: 18px;
