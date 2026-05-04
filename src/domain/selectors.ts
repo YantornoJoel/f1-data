@@ -1,4 +1,4 @@
-import type { ConstructorStanding, DriverProfile, DriverStanding, EnrichedEvent, EventResult, F1Data, GrandPrix, RaceResult, Series, SessionKey } from './f1';
+import type { ConstructorStanding, DriverProfile, DriverStanding, EnrichedEvent, EventResult, F1Data, GrandPrix, RaceResult, ResultSessionType, Series, SessionKey } from './f1';
 import { getCountryFlag } from '../utils/countries';
 import { zonedSessionToDate } from '../utils/dates';
 
@@ -8,6 +8,24 @@ const primarySessionBySeries: Record<Series, SessionKey> = {
 };
 
 const getSeriesEvents = (data: F1Data, series: Series): GrandPrix[] => data[series].grand_prix;
+
+const primaryResultTypeBySeries: Record<Series, ResultSessionType> = {
+  formula1: 'race',
+  formula2: 'featureRace',
+};
+
+const hasCompletedPrimaryResult = (data: F1Data, series: Series, event: GrandPrix): boolean => {
+  const primaryResultType = primaryResultTypeBySeries[series];
+  const hasConfiguredResult = (data[series].session_results ?? []).some(
+    (result) =>
+      result.round === event.round &&
+      result.sessions.some((session) => session.type === primaryResultType && session.status === 'completed' && session.results.length > 0),
+  );
+
+  if (hasConfiguredResult) return true;
+
+  return series === 'formula1' && data.formula1.race_results.some((result) => result.round === event.round);
+};
 
 export const getSeriesTimezone = (data: F1Data, series: Series, event: GrandPrix): string => {
   if (event.timezone) return event.timezone;
@@ -33,7 +51,7 @@ export const enrichEvents = (data: F1Data, series: Series): EnrichedEvent[] =>
 
 export const getUpcomingEvents = (data: F1Data, series: Series, referenceDate: Date): EnrichedEvent[] =>
   enrichEvents(data, series)
-    .filter((event) => !event.primaryInstant || event.primaryInstant >= referenceDate)
+    .filter((event) => !hasCompletedPrimaryResult(data, series, event) && (!event.primaryInstant || event.primaryInstant >= referenceDate))
     .sort((left, right) => (left.primaryInstant?.getTime() ?? Number.MAX_SAFE_INTEGER) - (right.primaryInstant?.getTime() ?? Number.MAX_SAFE_INTEGER));
 
 const eventByRound = (events: GrandPrix[]) => new Map(events.map((event) => [event.round, event]));

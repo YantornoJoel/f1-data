@@ -7,7 +7,7 @@ interface ResultsSectionProps { f1Results: EventResult[]; f2Results: EventResult
 const TOP_RESULTS_LIMIT = 5;
 const EXPANDED_RESULTS_PAGE_SIZE = 11;
 const sessionLabels: Record<ResultSessionType, string> = { race:'Carrera', qualifying:'Clasificación', sprint:'Sprint', sprintQualifying:'Clasificación Sprint', featureRace:'Carrera principal' };
-const sessionOrder: ResultSessionType[] = ['race', 'qualifying', 'sprint', 'sprintQualifying', 'featureRace'];
+const sessionOrder: ResultSessionType[] = ['race', 'featureRace', 'qualifying', 'sprint', 'sprintQualifying'];
 const Position = ({ position, status }: { position: number | null; status: string }) => <span className={`result-position ${position === 1 ? 'result-position--winner' : ''}`}>{position ?? status}</span>;
 const isQualifyingSession = (type: ResultSessionType | undefined) => type === 'qualifying' || type === 'sprintQualifying';
 

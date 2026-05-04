@@ -13,7 +13,7 @@ import { formatArgentinaDateTime } from './utils/dates';
 import { getTeamColor, pluralize } from './utils/format';
 import './index.css';
 
-const REFERENCE_DATE = new Date('2026-05-02T12:00:00-03:00');
+const REFERENCE_DATE = new Date();
 
 const App = () => {
   const nextF1Event = getNextEvent(f1Data, REFERENCE_DATE);

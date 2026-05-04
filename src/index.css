@@ -1369,41 +1369,41 @@ span.country-flag {
 
   .table-scroll {
     margin-inline: -6px;
-    overflow-x: visible;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .results-table {
-    min-width: 0;
-    table-layout: fixed;
-    font-size: 0.72rem;
+    min-width: 620px;
+    table-layout: auto;
+    font-size: 0.78rem;
+  }
+
+  .results-table--qualifying {
+    min-width: 760px;
   }
 
   .results-table th,
   .results-table td {
-    padding: 7px 4px;
+    padding: 8px 7px;
+    white-space: nowrap;
   }
 
   .results-table th {
-    font-size: 0.58rem;
+    font-size: 0.62rem;
     letter-spacing: 0.06em;
   }
 
   .results-table th:nth-child(1),
   .results-table td:nth-child(1) {
-    width: 38px;
+    width: 44px;
   }
 
-  .results-table th:nth-child(4),
-  .results-table td:nth-child(4),
-  .results-table th:nth-child(6),
-  .results-table td:nth-child(6) {
-    width: 38px;
-    text-align: center;
-  }
-
-  .results-table th:nth-child(5),
-  .results-table td:nth-child(5) {
-    width: 68px;
+  .results-table--qualifying th:nth-child(n+4),
+  .results-table--qualifying td:nth-child(n+4) {
+    min-width: 84px;
+    text-align: right;
   }
 
   .result-position {
@@ -1414,7 +1414,7 @@ span.country-flag {
 
   .team-cell {
     gap: 5px;
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .team-cell i {
