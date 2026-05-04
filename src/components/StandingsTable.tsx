@@ -1,11 +1,12 @@
 ﻿import { useState } from 'react';
 import type { DriverProfile, DriverStanding, Series } from '../domain/f1';
 import { getInitials, getTeamColor } from '../utils/format';
+import { getCloudinaryImageUrl } from '../utils/images';
 
 interface DriverWithStanding extends DriverProfile { points: number; position: number; }
 interface StandingsTableProps { f1Standings: DriverStanding[]; f2Standings: DriverStanding[]; f1Drivers: DriverWithStanding[]; f2Drivers: DriverWithStanding[]; }
 
-const DriverAvatar = ({ driver }: { driver?: DriverWithStanding }) => driver?.driver_image_url ? <img className="standing-avatar" src={driver.driver_image_url} alt={`Foto de ${driver.driver}`} loading="lazy" /> : <span className="standing-avatar standing-avatar--fallback">{getInitials(driver?.driver ?? '')}</span>;
+const DriverAvatar = ({ driver }: { driver?: DriverWithStanding }) => driver?.driver_image_url ? <img className="standing-avatar" src={getCloudinaryImageUrl(driver.driver_image_url, 'f_auto,q_auto,c_fill,g_auto,w_92,h_92')} alt={`Foto de ${driver.driver}`} loading="lazy" decoding="async" fetchPriority="low" width="46" height="46" /> : <span className="standing-avatar standing-avatar--fallback">{getInitials(driver?.driver ?? '')}</span>;
 
 export const StandingsTable = ({ f1Standings, f2Standings, f1Drivers, f2Drivers }: StandingsTableProps) => {
   const [series, setSeries] = useState<Series>('formula1');
@@ -18,3 +19,4 @@ export const StandingsTable = ({ f1Standings, f2Standings, f1Drivers, f2Drivers 
     <div className="standings-panel">{standings.map((standing) => { const percentage = leaderPoints === 0 ? 0 : (standing.points / leaderPoints) * 100; const profile = profiles.get(standing.driver); return <article className="standing-row" key={`${series}-${standing.driver}`}><span className="standing-row__position">#{standing.position}</span><DriverAvatar driver={profile} /><div className="standing-row__main"><div><strong>{standing.driver}</strong><span>{standing.team}</span></div><div className="points-bar" aria-hidden="true"><i style={{ width: `${percentage}%`, backgroundColor: getTeamColor(standing.team) }} /></div></div><strong className="standing-row__points">{standing.points}</strong></article>; })}</div>
   </section>;
 };
+

@@ -6,7 +6,7 @@
       "F1 event times are stored as UTC/timezone-aware sessions and rendered for America/Argentina/Buenos_Aires with Intl.DateTimeFormat. Miami 2026 was corrected so it renders Sprint 13:00 ART, Qualifying 17:00 ART and Race 17:00 ART.",
       "F2 session times were taken from the official F2 round pages and are track times unless otherwise noted.",
       "For F2, both sprint_race and feature_race are included because the championship runs two race sessions per round.",
-      "Direct stable image URLs for driver headshots and team logos were not reliably exposed in the parsed official HTML, so those fields are null and official page URLs are included instead.",
+      "F2 driver profiles include official page URLs, nationality/country codes, dates of birth and official Formula 2 Cloudinary driver/team image assets refreshed from FIA Formula 2 pages on 2026-05-04.",
       "Formula 1 race results include full classified/NC rows for Australia, China and Japan as published before the Miami race weekend on 2026-05-02.",
       "Formula 2 event times are event-local when known; the app converts known times to America/Argentina/Buenos_Aires using Intl. TBC remains visible as TBC.",
       "Miami 2026 Sprint Qualifying, Sprint, Qualifying and Race are loaded from official Formula1.com results; Miami is treated as completed for upcoming-race filtering.",
@@ -31,11 +31,12 @@
       "f2_melbourne_results": "https://www.fiaformula2.com/Results?raceid=1092",
       "f2_miami_results": "https://www.fiaformula2.com/Results?raceid=1106"
     },
-    "asset_version": 2,
+    "asset_version": 3,
     "asset_notes": [
       "Driver headshot URLs come from OpenF1's drivers endpoint and point to official media.formula1.com assets.",
       "Most team logo URLs were replaced with direct public asset links from Wikimedia Commons.",
-      "Racing Bulls team_logo_url remains null because a stable direct logo asset was not verified in this pass."
+      "Racing Bulls team_logo_url remains null because a stable direct logo asset was not verified in this pass.",
+      "F2 driver headshot and team logo URLs come from official FIA Formula 2 Cloudinary assets linked by the Teams & Drivers and driver profile pages."
     ]
   },
   "formula1": {
@@ -5763,134 +5764,288 @@
     {
       "driver": "Rafael Câmara",
       "team": "Invicta Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1268/Rafael-Camara",
+      "team_page_url": "https://www.fiaformula2.com/Teams/225/Invicta-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500490/f2/global/articles/2026/02_February/Driver%20Portraits/01_Camara.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1709139290/f2/global/teams/logos/Team-Logo_VirtuosiRacing_2.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Brazil",
+      "nationality_code": "BR",
+      "dateOfBirth": "2005-05-05"
     },
     {
       "driver": "Joshua Dürksen",
       "team": "Invicta Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1244/Joshua-Durksen",
+      "team_page_url": "https://www.fiaformula2.com/Teams/225/Invicta-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500492/f2/global/articles/2026/02_February/Driver%20Portraits/02_Duerksen.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1709139290/f2/global/teams/logos/Team-Logo_VirtuosiRacing_2.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Paraguay",
+      "nationality_code": "PY",
+      "dateOfBirth": "2003-10-27"
     },
     {
       "driver": "Ritomo Miyata",
       "team": "Hitech",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1241/Ritomo-Miyata",
+      "team_page_url": "https://www.fiaformula2.com/Teams/228/Hitech",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500509/f2/global/articles/2026/02_February/Driver%20Portraits/03_Miyata.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1736260376/f2/global/teams/logos/Team-Logo_Hitech024.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Japan",
+      "nationality_code": "JP",
+      "dateOfBirth": "1999-08-10"
     },
     {
       "driver": "Colton Herta",
       "team": "Hitech",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1269/Colton-Herta",
+      "team_page_url": "https://www.fiaformula2.com/Teams/228/Hitech",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500494/f2/global/articles/2026/02_February/Driver%20Portraits/04_Herta.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1736260376/f2/global/teams/logos/Team-Logo_Hitech024.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "United States",
+      "nationality_code": "US",
+      "dateOfBirth": "2000-03-30"
     },
     {
       "driver": "Noel León",
       "team": "Campos Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1270/Noel-Leon",
+      "team_page_url": "https://www.fiaformula2.com/Teams/217/Campos-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500927/f2/global/articles/2026/02_February/Driver%20Portraits/05_Leon.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1641289263/f2/global/teams/logos/Team-Logo_Campos.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Mexico",
+      "nationality_code": "MX",
+      "dateOfBirth": "2004-12-21"
     },
     {
       "driver": "Nikola Tsolov",
       "team": "Campos Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1265/Nikola-Tsolov",
+      "team_page_url": "https://www.fiaformula2.com/Teams/217/Campos-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500928/f2/global/articles/2026/02_February/Driver%20Portraits/06_Tsolov.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1641289263/f2/global/teams/logos/Team-Logo_Campos.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Bulgaria",
+      "nationality_code": "BG",
+      "dateOfBirth": "2006-12-21"
     },
     {
       "driver": "Dino Beganovic",
       "team": "DAMS Lucas Oil",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1252/Dino-Beganovic",
+      "team_page_url": "https://www.fiaformula2.com/Teams/209/DAMS-Lucas-Oil",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500493/f2/global/articles/2026/02_February/Driver%20Portraits/07_Beganovic.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1705935667/f2/global/teams/logos/Team-Logo_DAMS_LucasOil-024.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Sweden",
+      "nationality_code": "SE",
+      "dateOfBirth": "2004-01-19"
     },
     {
       "driver": "Roman Bilinski",
       "team": "DAMS Lucas Oil",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1271/Roman-Bilinski",
+      "team_page_url": "https://www.fiaformula2.com/Teams/209/DAMS-Lucas-Oil",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500492/f2/global/articles/2026/02_February/Driver%20Portraits/08_Bilinski.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1705935667/f2/global/teams/logos/Team-Logo_DAMS_LucasOil-024.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Poland",
+      "nationality_code": "PL",
+      "dateOfBirth": "2004-03-04"
     },
     {
       "driver": "Gabriele Minì",
       "team": "MP Motorsport",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1249/Gabriele-Mini",
+      "team_page_url": "https://www.fiaformula2.com/Teams/214/MP-Motorsport",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500495/f2/global/articles/2026/02_February/Driver%20Portraits/09_Mini.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1646052400/f2/global/teams/logos/Team-Logo_MPMotorsport022.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Italy",
+      "nationality_code": "IT",
+      "dateOfBirth": "2005-03-20"
     },
     {
       "driver": "Oliver Goethe",
       "team": "MP Motorsport",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1247/Oliver-Goethe",
+      "team_page_url": "https://www.fiaformula2.com/Teams/214/MP-Motorsport",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500498/f2/global/articles/2026/02_February/Driver%20Portraits/10_Goethe.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1646052400/f2/global/teams/logos/Team-Logo_MPMotorsport022.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Germany",
+      "nationality_code": "DE",
+      "dateOfBirth": "2004-10-14"
     },
     {
       "driver": "Sebastián Montoya",
       "team": "PREMA Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1258/Sebastian-Montoya",
+      "team_page_url": "https://www.fiaformula2.com/Teams/219/PREMA-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500499/f2/global/articles/2026/02_February/Driver%20Portraits/11_Montoya.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181799/f2/global/teams/2019/Team-Logo_PREMA.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Colombia",
+      "nationality_code": "CO",
+      "dateOfBirth": "2005-04-11"
     },
     {
       "driver": "Mari Boya",
       "team": "PREMA Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1272/Mari-Boya",
+      "team_page_url": "https://www.fiaformula2.com/Teams/219/PREMA-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771501277/f2/global/articles/2026/02_February/Driver%20Portraits/12_Boya.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181799/f2/global/teams/2019/Team-Logo_PREMA.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Spain",
+      "nationality_code": "ES",
+      "dateOfBirth": "2004-04-13"
     },
     {
       "driver": "Martinius Stenshorne",
       "team": "Rodin Motorsport",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1263/Martinius-Stenshorne",
+      "team_page_url": "https://www.fiaformula2.com/Teams/211/Rodin-Motorsport",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500503/f2/global/articles/2026/02_February/Driver%20Portraits/14_Stenshorne.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1704797929/f2/global/teams/logos/Team-Logo_RodinMotorsport.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Norway",
+      "nationality_code": "NO",
+      "dateOfBirth": "2006-02-02"
     },
     {
       "driver": "Alexander Dunne",
       "team": "Rodin Motorsport",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1260/Alexander-Dunne",
+      "team_page_url": "https://www.fiaformula2.com/Teams/211/Rodin-Motorsport",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500504/f2/global/articles/2026/02_February/Driver%20Portraits/15_Dunne.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1704797929/f2/global/teams/logos/Team-Logo_RodinMotorsport.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Ireland, Republic of",
+      "nationality_code": "IE",
+      "dateOfBirth": "2005-11-11"
     },
     {
       "driver": "Kush Maini",
       "team": "ART Grand Prix",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1231/Kush-Maini",
+      "team_page_url": "https://www.fiaformula2.com/Teams/207/ART-Grand-Prix",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500504/f2/global/articles/2026/02_February/Driver%20Portraits/16_Maini.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181795/f2/global/teams/2019/Team-Logo_ART.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "India",
+      "nationality_code": "IN",
+      "dateOfBirth": "2000-09-22"
     },
     {
       "driver": "Tasanapol Inthraphuvasak",
       "team": "ART Grand Prix",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1267/Tasanapol-Inthraphuvasak",
+      "team_page_url": "https://www.fiaformula2.com/Teams/207/ART-Grand-Prix",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500504/f2/global/articles/2026/02_February/Driver%20Portraits/17_Inthraphuvasak.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181795/f2/global/teams/2019/Team-Logo_ART.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Thailand",
+      "nationality_code": "TH",
+      "dateOfBirth": "2005-11-14"
     },
     {
       "driver": "Emerson Fittipaldi",
       "team": "AIX Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1273/Emerson-Fittipaldi",
+      "team_page_url": "https://www.fiaformula2.com/Teams/230/AIX-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500504/f2/global/articles/2026/02_February/Driver%20Portraits/20_Fittipaldi.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1715586799/f2/global/teams/logos/Team-Logo_AIXRacing.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Brazil",
+      "nationality_code": "BR",
+      "dateOfBirth": "2007-03-07"
     },
     {
       "driver": "Cian Shields",
       "team": "AIX Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1254/Cian-Shields",
+      "team_page_url": "https://www.fiaformula2.com/Teams/230/AIX-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500507/f2/global/articles/2026/02_February/Driver%20Portraits/21_Shields.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1715586799/f2/global/teams/logos/Team-Logo_AIXRacing.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "2005-03-07"
     },
     {
       "driver": "Nico Varrone",
       "team": "Van Amersfoort Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1274/Nico-Varrone",
+      "team_page_url": "https://www.fiaformula2.com/Teams/229/Van-Amersfoort-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500509/f2/global/articles/2026/02_February/Driver%20Portraits/22_Varrone.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1641054871/f2/global/teams/logos/Team-Logo_VAR.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Argentina",
+      "nationality_code": "AR",
+      "dateOfBirth": "2000-12-06"
     },
     {
       "driver": "Rafael Villagómez",
       "team": "Van Amersfoort Racing",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1245/Rafael-Villagomez",
+      "team_page_url": "https://www.fiaformula2.com/Teams/229/Van-Amersfoort-Racing",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500508/f2/global/articles/2026/02_February/Driver%20Portraits/23_Villagomez.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1641054871/f2/global/teams/logos/Team-Logo_VAR.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Mexico",
+      "nationality_code": "MX",
+      "dateOfBirth": "2001-11-10"
     },
     {
       "driver": "Laurens van Hoepen",
       "team": "TRIDENT",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1261/Laurens-van-Hoepen",
+      "team_page_url": "https://www.fiaformula2.com/Teams/205/TRIDENT",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500498/f2/global/articles/2026/02_February/Driver%20Portraits/24_Van_Hoepen.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181799/f2/global/teams/2019/Team-Logo_Trident.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Netherlands",
+      "nationality_code": "NL",
+      "dateOfBirth": "2005-09-06"
     },
     {
       "driver": "John Bennett",
       "team": "TRIDENT",
-      "driver_image_url": null,
-      "team_logo_url": null
+      "driver_page_url": "https://www.fiaformula2.com/Drivers/1255/John-Bennett",
+      "team_page_url": "https://www.fiaformula2.com/Teams/205/TRIDENT",
+      "driver_image_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1771500497/f2/global/articles/2026/02_February/Driver%20Portraits/25_Bennett.jpg",
+      "team_logo_url": "https://res.cloudinary.com/prod-f2f3/image/upload/v1583181799/f2/global/teams/2019/Team-Logo_Trident.png",
+      "driver_image_source": "Official FIA Formula 2 driver profile image",
+      "team_logo_source": "Official FIA Formula 2 team logo asset",
+      "nationality": "Great Britain",
+      "nationality_code": "GB",
+      "dateOfBirth": "2003-09-15"
     }
   ]
 }

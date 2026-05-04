@@ -4,12 +4,13 @@ import type { DriverProfile, Series } from '../domain/f1';
 import { CountryFlag } from './CountryFlag';
 import { calculateAge } from '../utils/dates';
 import { getInitials, getTeamColor } from '../utils/format';
+import { getCloudinaryImageUrl } from '../utils/images';
 
 interface DriverWithStanding extends DriverProfile { points: number; position: number; }
 interface DriversGridProps { f1Drivers: DriverWithStanding[]; f2Drivers: DriverWithStanding[]; }
 
-const DriverImage = ({ driver }: { driver: DriverWithStanding }) => driver.driver_image_url ? <img src={driver.driver_image_url} alt={`Foto de ${driver.driver}`} loading="lazy" /> : <div className="driver-fallback">{getInitials(driver.driver)}</div>;
-const TeamLogo = ({ driver }: { driver: DriverWithStanding }) => <div className="team-logo-plate">{driver.team_logo_url ? <img src={driver.team_logo_url} alt={`Logo de ${driver.team}`} loading="lazy" /> : <span className="team-logo-fallback">{driver.team}</span>}</div>;
+const DriverImage = ({ driver }: { driver: DriverWithStanding }) => driver.driver_image_url ? <img src={getCloudinaryImageUrl(driver.driver_image_url, 'f_auto,q_auto,c_limit,w_260')} alt={`Foto de ${driver.driver}`} loading="lazy" decoding="async" fetchPriority="low" width="260" height="130" /> : <div className="driver-fallback">{getInitials(driver.driver)}</div>;
+const TeamLogo = ({ driver }: { driver: DriverWithStanding }) => <div className="team-logo-plate">{driver.team_logo_url ? <img src={getCloudinaryImageUrl(driver.team_logo_url, 'f_auto,q_auto,c_limit,w_180')} alt={`Logo de ${driver.team}`} loading="lazy" decoding="async" fetchPriority="low" width="180" height="34" /> : <span className="team-logo-fallback">{driver.team}</span>}</div>;
 const groupByTeam = (drivers: DriverWithStanding[]) => drivers.reduce<Record<string, DriverWithStanding[]>>((acc, driver) => { acc[driver.team] = [...(acc[driver.team] ?? []), driver]; return acc; }, {});
 const AGE_REFERENCE_DATE = new Date('2026-05-02T12:00:00-03:00');
 
